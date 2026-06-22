@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, Mail, CheckCircle2, Sparkles, Loader2 } from "lucide-react";
 import { Magnetic } from "./magnetic";
 import { toast } from "sonner";
 
@@ -11,17 +11,40 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 export function CTA() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading || submitted) return;
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast.error("Please enter a valid email address.");
       return;
     }
-    setSubmitted(true);
-    toast.success("You're on the list! We'll be in touch within 24 hours.");
-    setEmail("");
-    setTimeout(() => setSubmitted(false), 4000);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, source: "landing_cta" }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        throw new Error(data?.error || "Request failed");
+      }
+      setSubmitted(true);
+      toast.success(
+        data.message ||
+          "You're on the list! We'll be in touch within 24 hours."
+      );
+      setEmail("");
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      toast.error(
+        err instanceof Error ? err.message : "Something went wrong. Try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -103,11 +126,16 @@ export function CTA() {
             <Magnetic strength={0.25}>
               <button
                 type="submit"
-                className="btn-primary-glow group inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-6 text-sm font-semibold"
+                disabled={loading || submitted}
+                className="btn-primary-glow group inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-6 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-80"
               >
                 {submitted ? (
                   <>
                     <CheckCircle2 className="h-4 w-4" /> Sent!
+                  </>
+                ) : loading ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" /> Sending…
                   </>
                 ) : (
                   <>

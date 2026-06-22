@@ -14,6 +14,7 @@ import {
   Star,
 } from "lucide-react";
 import { Magnetic } from "./magnetic";
+import { AnalyticsChart } from "./analytics-chart";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -269,7 +270,7 @@ function DashboardMockup() {
           </div>
         </div>
 
-        {/* growth chart */}
+        {/* growth stat card */}
         <div className="col-span-1 rounded-2xl border border-white/10 bg-[#070f22] p-3">
           <div className="flex items-center justify-between">
             <span className="text-[10px] text-slate-400">Growth</span>
@@ -278,7 +279,18 @@ function DashboardMockup() {
             </span>
           </div>
           <div className="mt-1 text-lg font-bold text-white">8,940</div>
-          <Sparkline />
+          <div className="mt-2 flex h-12 items-end gap-0.5">
+            {[40, 55, 48, 70, 62, 85, 100].map((h, i) => (
+              <motion.div
+                key={i}
+                initial={{ height: 0 }}
+                animate={{ height: `${h}%` }}
+                transition={{ duration: 0.6, delay: 0.5 + i * 0.08, ease: EASE }}
+                className="flex-1 rounded-sm bg-gradient-to-t from-[#2563eb]/40 to-[#38bdf8]"
+                style={{ minHeight: 4 }}
+              />
+            ))}
+          </div>
         </div>
 
         {/* performance cards */}
@@ -300,6 +312,25 @@ function DashboardMockup() {
           value="312"
           delta="+18%"
         />
+
+        {/* full-width analytics chart */}
+        <div className="col-span-3 rounded-2xl border border-white/10 bg-[#070f22] p-3">
+          <div className="mb-1 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-semibold text-white">
+                Weekly Performance
+              </span>
+              <span className="flex items-center gap-1 text-[9px] text-slate-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" /> Visitors
+                <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-[#06b6d4]" /> Leads
+              </span>
+            </div>
+            <span className="flex items-center gap-1 text-[9px] text-[#22c55e]">
+              <TrendingUp className="h-3 w-3" /> Trending up
+            </span>
+          </div>
+          <AnalyticsChart height={92} />
+        </div>
       </div>
 
       {/* bottom analytics bar */}
@@ -353,36 +384,6 @@ function PerfCard({
       <div className="mt-1.5 text-base font-bold text-white">{value}</div>
       <div className="text-[9px] font-semibold text-[#22c55e]">{delta}</div>
     </div>
-  );
-}
-
-function Sparkline() {
-  return (
-    <svg viewBox="0 0 100 36" className="mt-2 h-9 w-full" fill="none">
-      <defs>
-        <linearGradient id="spark" x1="0" y1="0" x2="0" y2="36">
-          <stop stopColor="#3b82f6" stopOpacity="0.5" />
-          <stop offset="1" stopColor="#3b82f6" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <motion.path
-        d="M2 28 L18 22 L32 25 L48 14 L64 18 L80 8 L98 4"
-        stroke="#38bdf8"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1.4, delay: 0.6, ease: "easeInOut" }}
-      />
-      <motion.path
-        d="M2 28 L18 22 L32 25 L48 14 L64 18 L80 8 L98 4 L98 36 L2 36 Z"
-        fill="url(#spark)"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-      />
-    </svg>
   );
 }
 
