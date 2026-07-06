@@ -58,7 +58,7 @@ export function Stats() {
               transition={{ duration: 0.6, ease: EASE, delay: i * 0.1 }}
               className="relative text-center sm:text-left"
             >
-              <div className="bg-gradient-to-br from-white via-[#bfdbfe] to-[#38bdf8] bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
+              <div className="bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
               <div className="mt-3 text-base font-semibold text-slate-900">
