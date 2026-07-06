@@ -1,5 +1,6 @@
 "use client";
 
+import { AuroraBackground } from "@/components/landing/aurora-background";
 import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
 import { LogosMarquee } from "@/components/landing/logos-marquee";
@@ -17,6 +18,7 @@ import { ScrollUtilities } from "@/components/landing/scroll-utilities";
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col">
+      <AuroraBackground />
       <a href="#main" className="skip-link">
         Skip to content
       </a>
@@ -26,8 +28,10 @@ export default function Home() {
         <Hero />
         <LogosMarquee />
         <Services />
+
         <Stats />
         <Solutions />
+
         <Testimonials />
         <FAQ />
         <CTA />

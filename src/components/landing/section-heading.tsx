@@ -39,7 +39,7 @@ export function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-        className="max-w-3xl text-balance text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+        className="max-w-3xl text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
       >
         {title}{" "}
         {highlight && <span className="text-gradient-blue">{highlight}</span>}
@@ -50,7 +50,7 @@ export function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-          className={`max-w-2xl text-pretty text-base leading-relaxed text-slate-600/90 sm:text-lg ${
+          className={`max-w-2xl text-pretty text-base leading-relaxed text-slate-400/90 sm:text-lg ${
             align === "center" ? "mx-auto" : ""
           }`}
         >

@@ -93,12 +93,12 @@ export function AuroraBackground() {
 
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      {/* Layer 1: light radial gradient base */}
+      {/* Layer 1: dark radial gradient base */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% -10%, #fff1f2 0%, #ffffff 55%, #ffffff 100%)",
+            "radial-gradient(120% 80% at 50% -10%, #1a1012 0%, #0A0A0A 55%, #0A0A0A 100%)",
         }}
       />
 
@@ -108,7 +108,7 @@ export function AuroraBackground() {
           className="absolute -top-32 -left-24 h-[42rem] w-[42rem] rounded-full blur-[120px] animate-aurora"
           style={{
             background:
-              "radial-gradient(circle, rgba(244,63,94,0.3) 0%, rgba(244,63,94,0) 70%)",
+              "radial-gradient(circle, rgba(244,63,94,0.15) 0%, rgba(244,63,94,0) 70%)",
           }}
         />
         <div
@@ -116,7 +116,7 @@ export function AuroraBackground() {
           style={{
             animationDelay: "-6s",
             background:
-              "radial-gradient(circle, rgba(251,146,60,0.3) 0%, rgba(251,146,60,0) 70%)",
+              "radial-gradient(circle, rgba(251,146,60,0.15) 0%, rgba(251,146,60,0) 70%)",
           }}
         />
         <div
@@ -124,14 +124,14 @@ export function AuroraBackground() {
           style={{
             animationDelay: "-12s",
             background:
-              "radial-gradient(circle, rgba(249,115,22,0.25) 0%, rgba(249,115,22,0) 70%)",
+              "radial-gradient(circle, rgba(249,115,22,0.12) 0%, rgba(249,115,22,0) 70%)",
           }}
         />
       </div>
 
       {/* Layer 3: blurred mesh gradient */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-20"
         style={{
           background:
             "conic-gradient(from 180deg at 50% 50%, rgba(244,63,94,0.15), rgba(251,146,60,0.15), rgba(251,113,133,0.1), rgba(244,63,94,0.15))",
@@ -147,12 +147,12 @@ export function AuroraBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 50% at 80% 20%, rgba(251,146,60,0.1) 0%, transparent 60%), radial-gradient(50% 50% at 15% 75%, rgba(244,63,94,0.1) 0%, transparent 60%)",
+            "radial-gradient(60% 50% at 80% 20%, rgba(251,146,60,0.05) 0%, transparent 60%), radial-gradient(50% 50% at 15% 75%, rgba(244,63,94,0.05) 0%, transparent 60%)",
         }}
       />
 
       {/* Subtle grid */}
-      <div className="absolute inset-0 grid-pattern opacity-70" />
+      <div className="absolute inset-0 grid-pattern opacity-30" />
 
       {/* Layer 6: noise texture overlay */}
       <div className="absolute inset-0 noise-overlay mix-blend-overlay" />
@@ -162,7 +162,7 @@ export function AuroraBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 100% at 50% 0%, transparent 50%, rgba(241,245,249,0.7) 100%)",
+            "radial-gradient(120% 100% at 50% 0%, transparent 50%, rgba(10,10,10,0.8) 100%)",
         }}
       />
     </div>

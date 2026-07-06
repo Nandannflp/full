@@ -1,56 +1,85 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Search, PenTool, Rocket, LineChart } from "lucide-react";
+import { SectionHeading } from "./section-heading";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+const STEPS = [
+  {
+    icon: Search,
+    step: "01",
+    title: "Discover & Audit",
+    description:
+      "We analyze your market, audience, and funnel to uncover the biggest growth opportunities — powered by AI insights.",
+  },
+  {
+    icon: PenTool,
+    step: "02",
+    title: "Design & Build",
+    description:
+      "Our team crafts a premium, conversion-first digital experience and integrates AI automations tailored to your goals.",
+  },
+  {
+    icon: Rocket,
+    step: "03",
+    title: "Launch & Scale",
+    description:
+      "We deploy, optimize, and activate lead-generation engines that fill your pipeline from day one.",
+  },
+  {
+    icon: LineChart,
+    step: "04",
+    title: "Measure & Optimize",
+    description:
+      "Continuous AI-driven A/B testing and analytics keep performance compounding month over month.",
+  },
+];
+
 export function Solutions() {
   return (
-    <section id="solutions" className="relative mx-auto w-full max-w-7xl px-4 py-32 sm:px-6 lg:py-40">
-      <div className="mb-24">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="text-4xl font-medium tracking-tight text-primary sm:text-5xl lg:text-6xl max-w-3xl"
-        >
-          A different approach to digital growth.
-        </motion.h2>
-      </div>
-      <div className="grid gap-12 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="border border-border p-12 flex flex-col justify-between aspect-[4/3] lg:aspect-auto"
-        >
-          <div className="text-secondary-foreground font-medium mb-8">01 — Strategy</div>
-          <div>
-            <h3 className="text-3xl font-medium text-primary mb-6">Built for scale</h3>
-            <p className="text-secondary-foreground text-lg leading-relaxed">
-              We design every system with your future in mind. Scalable architecture, 
-              robust design systems, and AI models that learn as you grow.
-            </p>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-          className="bg-accent p-12 flex flex-col justify-between aspect-[4/3] lg:aspect-auto"
-        >
-          <div className="text-secondary-foreground font-medium mb-8">02 — Execution</div>
-          <div>
-            <h3 className="text-3xl font-medium text-primary mb-6">Pixel perfection</h3>
-            <p className="text-secondary-foreground text-lg leading-relaxed">
-              Every detail matters. We craft digital experiences that not only perform 
-              flawlessly but leave a lasting impression on your audience.
-            </p>
-          </div>
-        </motion.div>
+    <section
+      id="solutions"
+      className="relative mx-auto w-full max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28"
+    >
+      <SectionHeading
+        kicker="How it works"
+        title="A proven path from"
+        highlight="idea to impact"
+        description="Our four-step framework combines strategy, design, and AI automation to deliver measurable growth — fast."
+      />
+
+      <div className="relative mt-16">
+        {/* connecting line */}
+        <div className="pointer-events-none absolute left-0 right-0 top-9 hidden h-px bg-gradient-to-r from-transparent via-orange-400/40 to-transparent lg:block" />
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {STEPS.map((s, i) => (
+            <motion.div
+              key={s.step}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, ease: EASE, delay: i * 0.1 }}
+              className="group relative"
+            >
+              {/* node */}
+              <div className="relative z-10 mx-auto mb-6 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl glass-card transition-all duration-500 group-hover:glow-blue sm:mx-0">
+                <s.icon className="h-7 w-7 text-[#38bdf8] transition-transform duration-500 group-hover:scale-110" />
+                <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500 text-[10px] font-bold text-white shadow-[0_0_16px_-2px_rgba(59,130,246,0.8)]">
+                  {s.step}
+                </span>
+              </div>
+              <h3 className="text-center text-lg font-bold text-white sm:text-left">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-center text-sm leading-relaxed text-slate-400 sm:text-left">
+                {s.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
