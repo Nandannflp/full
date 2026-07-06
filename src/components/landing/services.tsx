@@ -100,15 +100,15 @@ export function Services() {
               <span
                 className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${s.accent} shadow-[0_8px_24px_-8px_rgba(37,99,235,0.7)]`}
               >
-                <s.icon className="h-5 w-5 text-white" />
+                <s.icon className="h-5 w-5 text-foreground" />
               </span>
               <div>
-                <h3 className="text-lg font-bold text-white">{s.title}</h3>
+                <h3 className="text-lg font-bold text-foreground">{s.title}</h3>
                 <p className="text-xs text-[#38bdf8]">{s.tagline}</p>
               </div>
             </div>
 
-            <p className="text-sm leading-relaxed text-slate-400/85">
+            <p className="text-sm leading-relaxed text-muted-foreground/85">
               {s.description}
             </p>
 
@@ -116,7 +116,7 @@ export function Services() {
               {s.points.map((p) => (
                 <li
                   key={p}
-                  className="flex items-center gap-1.5 text-xs text-slate-400"
+                  className="flex items-center gap-1.5 text-xs text-muted-foreground"
                 >
                   <Check className="h-3.5 w-3.5 shrink-0 text-[#38bdf8]" />
                   {p}
@@ -126,7 +126,7 @@ export function Services() {
 
             <a
               href="#contact"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-colors hover:text-[#38bdf8]"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-colors hover:text-[#38bdf8]"
             >
               Learn more
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -146,8 +146,8 @@ function LeadGenVisual() {
       {/* funnel */}
       <div className="relative flex flex-col items-center gap-1.5 pt-2">
         {[
-          { w: "w-full", l: "Visitors", n: "12,480", c: "text-slate-400" },
-          { w: "w-[78%]", l: "Engaged", n: "6,210", c: "text-slate-400" },
+          { w: "w-full", l: "Visitors", n: "12,480", c: "text-muted-foreground" },
+          { w: "w-[78%]", l: "Engaged", n: "6,210", c: "text-muted-foreground" },
           { w: "w-[54%]", l: "Qualified", n: "2,940", c: "text-[#38bdf8]" },
           { w: "w-[32%]", l: "Leads", n: "812", c: "text-[#06b6d4]" },
         ].map((row, i) => (
@@ -160,7 +160,7 @@ function LeadGenVisual() {
             className={`relative ${row.w} rounded-lg border border-slate-900/10 bg-gradient-to-r from-[#0d1830] to-[#0a1430] px-3 py-1.5`}
           >
             <div className="flex items-center justify-between text-[10px]">
-              <span className="text-slate-400">{row.l}</span>
+              <span className="text-muted-foreground">{row.l}</span>
               <span className={`font-bold ${row.c}`}>{row.n}</span>
             </div>
           </motion.div>
@@ -217,10 +217,10 @@ function WebDevVisual() {
         </div>
       </div>
       {/* code line */}
-      <div className="mt-2 flex items-center gap-1.5 px-1 font-mono text-[9px] text-slate-400">
+      <div className="mt-2 flex items-center gap-1.5 px-1 font-mono text-[9px] text-muted-foreground">
         <span className="text-[#3b82f6]">const</span>
         <span className="text-[#38bdf8]">site</span>
-        <span className="text-slate-400">=</span>
+        <span className="text-muted-foreground">=</span>
         <span className="text-[#22c55e]">build()</span>
         <motion.span
           animate={{ opacity: [1, 0, 1] }}
@@ -307,7 +307,7 @@ function AIVisual() {
           />
         ))}
       </svg>
-      <div className="absolute bottom-2 left-3 right-3 rounded-md bg-slate-900/5 px-2 py-1 font-mono text-[9px] text-slate-400">
+      <div className="absolute bottom-2 left-3 right-3 rounded-md bg-slate-900/5 px-2 py-1 font-mono text-[9px] text-muted-foreground">
         <span className="text-[#38bdf8]">ai.run</span>(workflow){" "}
         <span className="text-[#22c55e]">→ automated</span>
       </div>

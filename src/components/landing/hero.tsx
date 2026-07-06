@@ -82,7 +82,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.05 }}
-          className="text-balance text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[4.2rem]"
+          className="text-balance text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl xl:text-[4.2rem]"
         >
           Transform Your Business With{" "}
           <span className="relative whitespace-nowrap">
@@ -118,7 +118,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
-          className="mx-auto mt-7 max-w-xl text-pretty text-base leading-relaxed text-slate-400/90 sm:text-lg xl:mx-0"
+          className="mx-auto mt-7 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground/90 sm:text-lg xl:mx-0"
         >
           Generate quality leads, build premium websites, and automate your
           business with cutting-edge technology that converts visitors into
@@ -167,7 +167,7 @@ export function Hero() {
             ].map((g, i) => (
               <span
                 key={i}
-                className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${g} text-xs font-bold text-white ring-2 ring-[#020617]`}
+                className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${g} text-xs font-bold text-foreground ring-2 ring-[#020617]`}
               >
                 {["A", "K", "M", "S"][i]}
               </span>
@@ -182,8 +182,8 @@ export function Hero() {
                 />
               ))}
             </div>
-            <p className="mt-1 text-sm text-slate-400">
-              Trusted by <span className="font-semibold text-white">500+</span>{" "}
+            <p className="mt-1 text-sm text-muted-foreground">
+              Trusted by <span className="font-semibold text-foreground">500+</span>{" "}
               growing brands
             </p>
           </div>
@@ -229,10 +229,10 @@ function DashboardMockup() {
           <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#22c55e]/70" />
         </div>
-        <div className="flex items-center gap-1.5 rounded-md bg-slate-900/5 px-2.5 py-1 text-[10px] text-slate-400">
+        <div className="flex items-center gap-1.5 rounded-md bg-slate-900/5 px-2.5 py-1 text-[10px] text-muted-foreground">
           <Globe className="h-3 w-3" /> app.adwiser.ai
         </div>
-        <div className="flex items-center gap-1 text-[10px] text-slate-400">
+        <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
           <Activity className="h-3 w-3 text-[#22c55e]" /> Live
         </div>
       </div>
@@ -273,12 +273,12 @@ function DashboardMockup() {
         {/* growth stat card */}
         <div className="col-span-1 rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] text-slate-400">Growth</span>
+            <span className="text-[10px] text-muted-foreground">Growth</span>
             <span className="rounded-md bg-[#22c55e]/15 px-1.5 py-0.5 text-[9px] font-semibold text-[#22c55e]">
               +38%
             </span>
           </div>
-          <div className="mt-1 text-lg font-bold text-white">8,940</div>
+          <div className="mt-1 text-lg font-bold text-foreground">8,940</div>
           <div className="mt-2 flex h-12 items-end gap-0.5">
             {[40, 55, 48, 70, 62, 85, 100].map((h, i) => (
               <motion.div
@@ -317,10 +317,10 @@ function DashboardMockup() {
         <div className="col-span-3 rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
           <div className="mb-1 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-semibold text-white">
+              <span className="text-[10px] font-semibold text-foreground">
                 Weekly Performance
               </span>
-              <span className="flex items-center gap-1 text-[9px] text-slate-400">
+              <span className="flex items-center gap-1 text-[9px] text-muted-foreground">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" /> Visitors
                 <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-[#06b6d4]" /> Leads
               </span>
@@ -340,7 +340,7 @@ function DashboardMockup() {
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">
-            <span className="text-[11px] font-semibold text-white">
+            <span className="text-[11px] font-semibold text-foreground">
               AI Assistant
             </span>
             <span className="flex items-center gap-1 text-[9px] text-[#38bdf8]">
@@ -352,7 +352,7 @@ function DashboardMockup() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#0A0A0A]/40 animate-bounce [animation-delay:-0.2s]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#0A0A0A]/40 animate-bounce [animation-delay:-0.1s]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#0A0A0A]/40 animate-bounce" />
-            <span className="ml-1.5 text-[10px] text-slate-400">
+            <span className="ml-1.5 text-[10px] text-muted-foreground">
               Optimizing your landing page…
             </span>
           </div>
@@ -375,13 +375,13 @@ function PerfCard({
 }) {
   return (
     <div className="rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
-      <div className="flex items-center gap-1.5 text-slate-400">
+      <div className="flex items-center gap-1.5 text-muted-foreground">
         <span className="flex h-6 w-6 items-center justify-center rounded-md bg-slate-900/5 text-[#38bdf8]">
           {icon}
         </span>
         <span className="text-[10px]">{label}</span>
       </div>
-      <div className="mt-1.5 text-base font-bold text-white">{value}</div>
+      <div className="mt-1.5 text-base font-bold text-foreground">{value}</div>
       <div className="text-[9px] font-semibold text-[#22c55e]">{delta}</div>
     </div>
   );
@@ -406,8 +406,8 @@ function FloatingLeadCard() {
             <Bell className="h-4 w-4" />
           </span>
           <div>
-            <div className="text-[10px] text-slate-400">New lead</div>
-            <div className="text-xs font-semibold text-white">
+            <div className="text-[10px] text-muted-foreground">New lead</div>
+            <div className="text-xs font-semibold text-foreground">
               Sarah just signed up
             </div>
           </div>
@@ -439,10 +439,10 @@ function FloatingStatCard() {
         className="glass-strong w-40 rounded-2xl p-3 glow-cyan"
       >
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">Revenue</span>
+          <span className="text-[10px] text-muted-foreground">Revenue</span>
           <TrendingUp className="h-3.5 w-3.5 text-[#22c55e]" />
         </div>
-        <div className="mt-1 text-xl font-bold text-white">$48.2K</div>
+        <div className="mt-1 text-xl font-bold text-foreground">$48.2K</div>
         <div className="text-[9px] font-semibold text-[#22c55e]">
           +24% this month
         </div>
@@ -467,7 +467,7 @@ function FloatingAIWidget() {
         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500">
           <Bot className="h-4 w-4 text-white" />
         </span>
-        <span className="text-xs font-medium text-white">
+        <span className="text-xs font-medium text-foreground">
           AI optimized 3 pages
         </span>
       </motion.div>

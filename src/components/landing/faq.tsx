@@ -71,15 +71,15 @@ export function FAQ() {
             >
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-3 py-2 text-left">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 text-[#38bdf8] transition-colors duration-300 group-data-[state=open]:bg-gradient-to-br group-data-[state=open]:from-rose-500 group-data-[state=open]:to-orange-500 group-data-[state=open]:text-white">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 text-[#38bdf8] transition-colors duration-300 group-data-[state=open]:bg-gradient-to-br group-data-[state=open]:from-rose-500 group-data-[state=open]:to-orange-500 group-data-[state=open]:text-foreground">
                     <HelpCircle className="h-4 w-4" />
                   </span>
-                  <span className="text-base font-semibold text-white">
+                  <span className="text-base font-semibold text-foreground">
                     {f.q}
                   </span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pb-5 pt-1 text-sm leading-relaxed text-slate-400/90">
+              <AccordionContent className="pb-5 pt-1 text-sm leading-relaxed text-muted-foreground/90">
                 <div className="pl-10">{f.a}</div>
               </AccordionContent>
             </AccordionItem>
@@ -96,13 +96,13 @@ export function FAQ() {
         className="mt-10 flex flex-col items-center justify-center gap-4 rounded-2xl glass-card p-6 text-center sm:flex-row sm:text-left"
       >
         <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-orange-500">
-          <MessageSquareMore className="h-5 w-5 text-white" />
+          <MessageSquareMore className="h-5 w-5 text-foreground" />
         </span>
         <div className="flex-1">
-          <p className="text-sm font-semibold text-white">
+          <p className="text-sm font-semibold text-foreground">
             Still have questions?
           </p>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-muted-foreground">
             Chat with our team and get answers in minutes, not days.
           </p>
         </div>

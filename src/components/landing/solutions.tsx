@@ -67,14 +67,14 @@ export function Solutions() {
               {/* node */}
               <div className="relative z-10 mx-auto mb-6 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl glass-card transition-all duration-500 group-hover:glow-blue sm:mx-0">
                 <s.icon className="h-7 w-7 text-[#38bdf8] transition-transform duration-500 group-hover:scale-110" />
-                <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500 text-[10px] font-bold text-white shadow-[0_0_16px_-2px_rgba(59,130,246,0.8)]">
+                <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500 text-[10px] font-bold text-foreground shadow-[0_0_16px_-2px_rgba(59,130,246,0.8)]">
                   {s.step}
                 </span>
               </div>
-              <h3 className="text-center text-lg font-bold text-white sm:text-left">
+              <h3 className="text-center text-lg font-bold text-foreground sm:text-left">
                 {s.title}
               </h3>
-              <p className="mt-2 text-center text-sm leading-relaxed text-slate-400 sm:text-left">
+              <p className="mt-2 text-center text-sm leading-relaxed text-muted-foreground sm:text-left">
                 {s.description}
               </p>
             </motion.div>

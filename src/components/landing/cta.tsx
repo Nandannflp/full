@@ -88,7 +88,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-            className="mt-5 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
           >
             Ready To Scale Faster?
           </motion.h2>
@@ -98,7 +98,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-            className="mx-auto mt-5 max-w-xl text-pretty text-base text-slate-300/90 sm:text-lg"
+            className="mx-auto mt-5 max-w-xl text-pretty text-base text-slate-700 dark:text-slate-300/90 sm:text-lg"
           >
             Join 500+ brands growing with Adwiser. Get a free strategy session
             and a custom growth roadmap in 24 hours.
@@ -113,14 +113,14 @@ export function CTA() {
             className="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row"
           >
             <div className="relative flex-1">
-              <Mail className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+              <Mail className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@company.com"
                 aria-label="Email address"
-                className="h-12 w-full rounded-xl border border-white/15 bg-[#0A0A0A]/10 pl-10 pr-4 text-sm text-white placeholder:text-slate-400 backdrop-blur-md transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/40"
+                className="h-12 w-full rounded-xl border border-white/15 bg-[#0A0A0A]/10 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground backdrop-blur-md transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/40"
               />
             </div>
             <Magnetic strength={0.25}>
@@ -147,7 +147,7 @@ export function CTA() {
             </Magnetic>
           </motion.form>
 
-          <p className="mt-4 text-xs text-slate-400/70">
+          <p className="mt-4 text-xs text-muted-foreground/70">
             No spam. Unsubscribe anytime. We respect your privacy.
           </p>
         </div>

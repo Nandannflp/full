@@ -107,20 +107,20 @@ export function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="relative z-10 text-sm leading-relaxed text-slate-300">
+              <p className="relative z-10 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                 "{t.review}"
               </p>
               <div className="mt-6 flex items-center gap-3 border-t border-slate-900/10 pt-4">
                 <span
-                  className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-sm font-bold text-white ring-2 ring-white/10`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-sm font-bold text-foreground ring-2 ring-white/10`}
                 >
                   {t.initials}
                 </span>
                 <div>
-                  <div className="text-sm font-semibold text-white">
+                  <div className="text-sm font-semibold text-foreground">
                     {t.name}
                   </div>
-                  <div className="text-xs text-slate-400">{t.role}</div>
+                  <div className="text-xs text-muted-foreground">{t.role}</div>
                 </div>
               </div>
             </motion.div>

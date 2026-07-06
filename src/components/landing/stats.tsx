@@ -61,10 +61,10 @@ export function Stats() {
               <div className="bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-3 text-base font-semibold text-white">
+              <div className="mt-3 text-base font-semibold text-foreground">
                 {s.label}
               </div>
-              <div className="mt-1 text-sm text-slate-400">{s.sub}</div>
+              <div className="mt-1 text-sm text-muted-foreground">{s.sub}</div>
               {i < STATS.length - 1 && (
                 <div className="absolute right-0 top-1/2 hidden h-16 w-px -translate-y-1/2 bg-gradient-to-b from-transparent via-white/15 to-transparent lg:block" />
               )}

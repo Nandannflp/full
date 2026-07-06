@@ -22,6 +22,22 @@
 }
 
 :root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #f43f5e;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f97316;
+  --accent-foreground: #ffffff;
+  --border: rgba(15, 23, 42, 0.12);
+  --input: rgba(15, 23, 42, 0.16);
+  --ring: #f43f5e;
+}
+
+.dark {
   --background: #0A0A0A;
   --foreground: #F5F5F5;
   --primary: #F5F5F5;
@@ -48,16 +64,13 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-color: #0A0A0A;
-    color: #F5F5F5;
     font-family: var(--font-inter), system-ui, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   ::selection {
-    background: rgba(245, 245, 245, 0.2);
-    color: #F5F5F5;
+    @apply bg-primary/20 text-foreground;
   }
   
   /* Typography Scale */
@@ -92,15 +105,15 @@
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: var(--border);
   border-radius: 0;
-  border: 1px solid #0A0A0A;
+  border: 1px solid var(--background);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: var(--accent);
 }
 
 /* ============ Typography helpers ============ */

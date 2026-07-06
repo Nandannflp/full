@@ -93,13 +93,9 @@ export function AuroraBackground() {
 
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      {/* Layer 1: dark radial gradient base */}
+      {/* Layer 1: radial gradient base */}
       <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(120% 80% at 50% -10%, #1a1012 0%, #0A0A0A 55%, #0A0A0A 100%)",
-        }}
+        className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_-10%,#fff_0%,#f8fafc_55%,#f8fafc_100%)] dark:bg-[radial-gradient(120%_80%_at_50%_-10%,#1a1012_0%,#0A0A0A_55%,#0A0A0A_100%)]"
       />
 
       {/* Layer 2: aurora blobs */}
@@ -159,11 +155,7 @@ export function AuroraBackground() {
 
       {/* Vignette for depth */}
       <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(120% 100% at 50% 0%, transparent 50%, rgba(10,10,10,0.8) 100%)",
-        }}
+        className="absolute inset-0 bg-[radial-gradient(120%_100%_at_50%_0%,transparent_50%,rgba(255,255,255,0.4)_100%)] dark:bg-[radial-gradient(120%_100%_at_50%_0%,transparent_50%,rgba(10,10,10,0.8)_100%)]"
       />
     </div>
   );

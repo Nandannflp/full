@@ -73,14 +73,14 @@ export function Showcase() {
           <button
             onClick={() => scrollBy(-1)}
             aria-label="Previous projects"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-900/10 bg-slate-900/5 text-white transition-all hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#38bdf8]"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-900/10 bg-slate-900/5 text-foreground transition-all hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#38bdf8]"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={() => scrollBy(1)}
             aria-label="Next projects"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-900/10 bg-slate-900/5 text-white transition-all hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#38bdf8]"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-900/10 bg-slate-900/5 text-foreground transition-all hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#38bdf8]"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -107,8 +107,8 @@ export function Showcase() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-[#38bdf8]">
                   {p.category}
                 </p>
-                <h3 className="mt-1 text-xl font-bold text-white">{p.name}</h3>
-                <p className="mt-1 max-w-xs text-sm text-slate-400">
+                <h3 className="mt-1 text-xl font-bold text-foreground">{p.name}</h3>
+                <p className="mt-1 max-w-xs text-sm text-muted-foreground">
                   {p.description}
                 </p>
               </div>
@@ -162,7 +162,7 @@ function MacBook({ gradient, name }: { gradient: string; name: string }) {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             {/* hover overlay */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-              <span className="flex items-center gap-2 rounded-full bg-[#0A0A0A]/15 px-4 py-2 text-xs font-semibold text-white backdrop-blur-md">
+              <span className="flex items-center gap-2 rounded-full bg-[#0A0A0A]/15 px-4 py-2 text-xs font-semibold text-foreground backdrop-blur-md">
                 <ExternalLink className="h-3.5 w-3.5" /> View {name}
               </span>
             </div>

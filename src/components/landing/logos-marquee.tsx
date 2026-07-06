@@ -28,10 +28,10 @@ function LogoRow({ reverse = false }: { reverse?: boolean }) {
           key={l.name}
           className="group flex items-center gap-2.5 opacity-55 transition-all duration-300 hover:opacity-100"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-900/10 bg-slate-900/5 font-display text-sm font-bold text-[#38bdf8] transition-all duration-300 group-hover:border-[#3b82f6]/50 group-hover:bg-[#3b82f6]/10 group-hover:text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-900/10 bg-slate-900/5 font-display text-sm font-bold text-[#38bdf8] transition-all duration-300 group-hover:border-[#3b82f6]/50 group-hover:bg-[#3b82f6]/10 group-hover:text-foreground">
             {l.mark}
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight text-slate-400 transition-colors duration-300 group-hover:text-white">
+          <span className="font-display text-lg font-semibold tracking-tight text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
             {l.name}
           </span>
         </div>
@@ -55,7 +55,7 @@ export function LogosMarquee() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: EASE }}
-        className="mb-7 text-center text-xs font-semibold uppercase tracking-[0.25em] text-slate-400"
+        className="mb-7 text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground"
       >
         Powering growth at category leaders
       </motion.p>

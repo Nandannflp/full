@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Magnetic } from "./magnetic";
+import { ThemeToggle } from "./theme-toggle";
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -42,10 +43,10 @@ export function Navbar() {
         {/* Logo */}
         <a href="#home" className="group flex items-center gap-2.5">
           <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 via-orange-400 to-orange-500 shadow-[0_0_24px_-4px_rgba(59,130,246,0.7)]">
-            <Sparkles className="h-5 w-5 text-white" />
+            <Sparkles className="h-5 w-5 text-foreground" />
             <span className="absolute inset-0 rounded-xl ring-1 ring-white/20" />
           </span>
-          <span className="text-lg font-bold tracking-tight text-white">
+          <span className="text-lg font-bold tracking-tight text-foreground">
             Adwiser
           </span>
         </a>
@@ -56,7 +57,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="group relative rounded-lg px-3.5 py-2 text-sm font-medium text-slate-400 transition-colors hover:text-white"
+                className="group relative rounded-lg px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
                 <span className="absolute inset-x-3.5 -bottom-0.5 h-px origin-left scale-x-0 bg-gradient-to-r from-rose-500 to-orange-500 transition-transform duration-300 group-hover:scale-x-100" />
@@ -67,9 +68,10 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <a
             href="#contact"
-            className="text-sm font-medium text-slate-400 transition-colors hover:text-white"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Sign in
           </a>
@@ -84,14 +86,17 @@ export function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-900/10 bg-slate-900/5 text-white lg:hidden"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-muted text-foreground"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -111,7 +116,7 @@ export function Navbar() {
                     <a
                       href={l.href}
                       onClick={() => setOpen(false)}
-                      className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition-colors hover:bg-slate-900/5 hover:text-white"
+                      className="block rounded-xl px-4 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                     >
                       {l.label}
                     </a>

@@ -46,7 +46,7 @@ export function ScrollUtilities() {
               window.scrollTo({ top: 0, behavior: "smooth" })
             }
             aria-label="Back to top"
-            className="group fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full glass-strong text-white shadow-[0_8px_30px_-6px_rgba(2,6,23,0.8)] transition-all duration-300 hover:border-[#3b82f6]/60 hover:text-[#38bdf8] hover:shadow-[0_0_28px_-4px_rgba(59,130,246,0.7)]"
+            className="group fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full glass-strong text-foreground shadow-[0_8px_30px_-6px_rgba(2,6,23,0.8)] transition-all duration-300 hover:border-[#3b82f6]/60 hover:text-[#38bdf8] hover:shadow-[0_0_28px_-4px_rgba(59,130,246,0.7)]"
           >
             <ArrowUp className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5" />
             <span className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-rose-500/0 to-orange-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:from-rose-500/20 group-hover:to-orange-500/20" />
