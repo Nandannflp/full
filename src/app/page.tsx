@@ -5,10 +5,10 @@ import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
 import { LogosMarquee } from "@/components/landing/logos-marquee";
 import { Services } from "@/components/landing/services";
-import { Showcase } from "@/components/landing/showcase";
+
 import { Stats } from "@/components/landing/stats";
 import { Solutions } from "@/components/landing/solutions";
-import { Pricing } from "@/components/landing/pricing";
+
 import { Testimonials } from "@/components/landing/testimonials";
 import { FAQ } from "@/components/landing/faq";
 import { CTA } from "@/components/landing/cta";
@@ -28,10 +28,10 @@ export default function Home() {
         <Hero />
         <LogosMarquee />
         <Services />
-        <Showcase />
+
         <Stats />
         <Solutions />
-        <Pricing />
+
         <Testimonials />
         <FAQ />
         <CTA />
