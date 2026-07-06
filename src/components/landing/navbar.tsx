@@ -69,12 +69,6 @@ export function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
-          <a
-            href="#contact"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Sign in
-          </a>
           <Magnetic>
             <a
               href="#contact"
