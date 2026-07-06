@@ -53,7 +53,7 @@ export function AuroraBackground() {
         vy: (Math.random() - 0.5) * 0.25,
         r: Math.random() * 1.8 + 0.6,
         a: Math.random() * 0.5 + 0.2,
-        hue: Math.random() > 0.5 ? 210 : 190,
+        hue: Math.random() > 0.5 ? 340 : 25, /* pink (340) or orange (25) */
       }));
     };
 
@@ -68,7 +68,7 @@ export function AuroraBackground() {
         if (p.y > h + 10) p.y = -10;
         const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
         grad.addColorStop(0, `hsla(${p.hue}, 95%, 65%, ${p.a})`);
-        grad.addColorStop(1, "hsla(210, 95%, 65%, 0)");
+        grad.addColorStop(1, `hsla(${p.hue}, 95%, 65%, 0)`);
         ctx.fillStyle = grad;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
@@ -93,12 +93,12 @@ export function AuroraBackground() {
 
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      {/* Layer 1: dark navy gradient base */}
+      {/* Layer 1: light radial gradient base */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% -10%, #071126 0%, #020617 55%, #020617 100%)",
+            "radial-gradient(120% 80% at 50% -10%, #fff1f2 0%, #ffffff 55%, #ffffff 100%)",
         }}
       />
 
@@ -108,7 +108,7 @@ export function AuroraBackground() {
           className="absolute -top-32 -left-24 h-[42rem] w-[42rem] rounded-full blur-[120px] animate-aurora"
           style={{
             background:
-              "radial-gradient(circle, rgba(37,99,235,0.45) 0%, rgba(37,99,235,0) 70%)",
+              "radial-gradient(circle, rgba(244,63,94,0.3) 0%, rgba(244,63,94,0) 70%)",
           }}
         />
         <div
@@ -116,7 +116,7 @@ export function AuroraBackground() {
           style={{
             animationDelay: "-6s",
             background:
-              "radial-gradient(circle, rgba(6,182,212,0.35) 0%, rgba(6,182,212,0) 70%)",
+              "radial-gradient(circle, rgba(251,146,60,0.3) 0%, rgba(251,146,60,0) 70%)",
           }}
         />
         <div
@@ -124,17 +124,17 @@ export function AuroraBackground() {
           style={{
             animationDelay: "-12s",
             background:
-              "radial-gradient(circle, rgba(59,130,246,0.32) 0%, rgba(59,130,246,0) 70%)",
+              "radial-gradient(circle, rgba(249,115,22,0.25) 0%, rgba(249,115,22,0) 70%)",
           }}
         />
       </div>
 
       {/* Layer 3: blurred mesh gradient */}
       <div
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0 opacity-40"
         style={{
           background:
-            "conic-gradient(from 180deg at 50% 50%, rgba(37,99,235,0.10), rgba(6,182,212,0.10), rgba(56,189,248,0.06), rgba(37,99,235,0.10))",
+            "conic-gradient(from 180deg at 50% 50%, rgba(244,63,94,0.15), rgba(251,146,60,0.15), rgba(251,113,133,0.1), rgba(244,63,94,0.15))",
           filter: "blur(80px)",
         }}
       />
@@ -147,7 +147,7 @@ export function AuroraBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 50% at 80% 20%, rgba(56,189,248,0.08) 0%, transparent 60%), radial-gradient(50% 50% at 15% 75%, rgba(37,99,235,0.10) 0%, transparent 60%)",
+            "radial-gradient(60% 50% at 80% 20%, rgba(251,146,60,0.1) 0%, transparent 60%), radial-gradient(50% 50% at 15% 75%, rgba(244,63,94,0.1) 0%, transparent 60%)",
         }}
       />
 
@@ -162,7 +162,7 @@ export function AuroraBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 100% at 50% 0%, transparent 50%, rgba(2,6,23,0.6) 100%)",
+            "radial-gradient(120% 100% at 50% 0%, transparent 50%, rgba(241,245,249,0.7) 100%)",
         }}
       />
     </div>

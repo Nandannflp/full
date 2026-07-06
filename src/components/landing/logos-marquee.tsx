@@ -28,10 +28,10 @@ function LogoRow({ reverse = false }: { reverse?: boolean }) {
           key={l.name}
           className="group flex items-center gap-2.5 opacity-55 transition-all duration-300 hover:opacity-100"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 font-display text-sm font-bold text-[#38bdf8] transition-all duration-300 group-hover:border-[#3b82f6]/50 group-hover:bg-[#3b82f6]/10 group-hover:text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-900/10 bg-slate-900/5 font-display text-sm font-bold text-[#38bdf8] transition-all duration-300 group-hover:border-[#3b82f6]/50 group-hover:bg-[#3b82f6]/10 group-hover:text-slate-900">
             {l.mark}
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight text-slate-300 transition-colors duration-300 group-hover:text-white">
+          <span className="font-display text-lg font-semibold tracking-tight text-slate-600 transition-colors duration-300 group-hover:text-slate-900">
             {l.name}
           </span>
         </div>

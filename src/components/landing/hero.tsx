@@ -82,7 +82,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.05 }}
-          className="text-balance text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[4.2rem]"
+          className="text-balance text-4xl font-bold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl xl:text-[4.2rem]"
         >
           Transform Your Business With{" "}
           <span className="relative whitespace-nowrap">
@@ -118,7 +118,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
-          className="mx-auto mt-7 max-w-xl text-pretty text-base leading-relaxed text-slate-300/90 sm:text-lg xl:mx-0"
+          className="mx-auto mt-7 max-w-xl text-pretty text-base leading-relaxed text-slate-600/90 sm:text-lg xl:mx-0"
         >
           Generate quality leads, build premium websites, and automate your
           business with cutting-edge technology that converts visitors into
@@ -160,14 +160,14 @@ export function Hero() {
         >
           <div className="flex -space-x-2.5">
             {[
-              "from-[#2563eb] to-[#3b82f6]",
-              "from-[#3b82f6] to-[#06b6d4]",
+              "from-rose-500 to-[#3b82f6]",
+              "from-rose-500 to-orange-500",
               "from-[#06b6d4] to-[#38bdf8]",
               "from-[#38bdf8] to-[#2563eb]",
             ].map((g, i) => (
               <span
                 key={i}
-                className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${g} text-xs font-bold text-white ring-2 ring-[#020617]`}
+                className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${g} text-xs font-bold text-slate-900 ring-2 ring-[#020617]`}
               >
                 {["A", "K", "M", "S"][i]}
               </span>
@@ -182,8 +182,8 @@ export function Hero() {
                 />
               ))}
             </div>
-            <p className="mt-1 text-sm text-slate-400">
-              Trusted by <span className="font-semibold text-white">500+</span>{" "}
+            <p className="mt-1 text-sm text-slate-500">
+              Trusted by <span className="font-semibold text-slate-900">500+</span>{" "}
               growing brands
             </p>
           </div>
@@ -229,7 +229,7 @@ function DashboardMockup() {
           <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#22c55e]/70" />
         </div>
-        <div className="flex items-center gap-1.5 rounded-md bg-white/5 px-2.5 py-1 text-[10px] text-slate-400">
+        <div className="flex items-center gap-1.5 rounded-md bg-slate-900/5 px-2.5 py-1 text-[10px] text-slate-500">
           <Globe className="h-3 w-3" /> app.adwiser.ai
         </div>
         <div className="flex items-center gap-1 text-[10px] text-slate-500">
@@ -239,13 +239,13 @@ function DashboardMockup() {
 
       <div className="grid grid-cols-3 gap-2.5">
         {/* website preview */}
-        <div className="col-span-2 overflow-hidden rounded-2xl border border-white/10 bg-[#070f22]">
+        <div className="col-span-2 overflow-hidden rounded-2xl border border-slate-900/10 bg-[#070f22]">
           <div className="relative aspect-[16/10]">
             {/* faux website */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0b1224] to-[#0a1830] p-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5">
-                  <div className="h-4 w-4 rounded bg-gradient-to-br from-[#2563eb] to-[#06b6d4]" />
+                  <div className="h-4 w-4 rounded bg-gradient-to-br from-rose-500 to-orange-500" />
                   <div className="h-2 w-12 rounded-full bg-white/20" />
                 </div>
                 <div className="flex gap-1.5">
@@ -256,13 +256,13 @@ function DashboardMockup() {
               </div>
               <div className="mt-4 space-y-1.5">
                 <div className="h-3 w-3/4 rounded-full bg-gradient-to-r from-white/70 to-white/30" />
-                <div className="h-3 w-1/2 rounded-full bg-gradient-to-r from-[#38bdf8]/70 to-[#06b6d4]/40" />
+                <div className="h-3 w-1/2 rounded-full bg-gradient-to-r from-[#38bdf8]/70 to-orange-500/40" />
               </div>
-              <div className="mt-3 h-5 w-20 rounded-md bg-gradient-to-r from-[#2563eb] to-[#06b6d4]" />
+              <div className="mt-3 h-5 w-20 rounded-md bg-gradient-to-r from-rose-500 to-orange-500" />
               <div className="mt-4 grid grid-cols-3 gap-1.5">
-                <div className="h-10 rounded-lg bg-white/5" />
-                <div className="h-10 rounded-lg bg-white/5" />
-                <div className="h-10 rounded-lg bg-white/5" />
+                <div className="h-10 rounded-lg bg-slate-900/5" />
+                <div className="h-10 rounded-lg bg-slate-900/5" />
+                <div className="h-10 rounded-lg bg-slate-900/5" />
               </div>
             </div>
             {/* shine */}
@@ -271,14 +271,14 @@ function DashboardMockup() {
         </div>
 
         {/* growth stat card */}
-        <div className="col-span-1 rounded-2xl border border-white/10 bg-[#070f22] p-3">
+        <div className="col-span-1 rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] text-slate-400">Growth</span>
+            <span className="text-[10px] text-slate-500">Growth</span>
             <span className="rounded-md bg-[#22c55e]/15 px-1.5 py-0.5 text-[9px] font-semibold text-[#22c55e]">
               +38%
             </span>
           </div>
-          <div className="mt-1 text-lg font-bold text-white">8,940</div>
+          <div className="mt-1 text-lg font-bold text-slate-900">8,940</div>
           <div className="mt-2 flex h-12 items-end gap-0.5">
             {[40, 55, 48, 70, 62, 85, 100].map((h, i) => (
               <motion.div
@@ -286,7 +286,7 @@ function DashboardMockup() {
                 initial={{ height: 0 }}
                 animate={{ height: `${h}%` }}
                 transition={{ duration: 0.6, delay: 0.5 + i * 0.08, ease: EASE }}
-                className="flex-1 rounded-sm bg-gradient-to-t from-[#2563eb]/40 to-[#38bdf8]"
+                className="flex-1 rounded-sm bg-gradient-to-t from-rose-500/40 to-[#38bdf8]"
                 style={{ minHeight: 4 }}
               />
             ))}
@@ -314,13 +314,13 @@ function DashboardMockup() {
         />
 
         {/* full-width analytics chart */}
-        <div className="col-span-3 rounded-2xl border border-white/10 bg-[#070f22] p-3">
+        <div className="col-span-3 rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
           <div className="mb-1 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-semibold text-white">
+              <span className="text-[10px] font-semibold text-slate-900">
                 Weekly Performance
               </span>
-              <span className="flex items-center gap-1 text-[9px] text-slate-400">
+              <span className="flex items-center gap-1 text-[9px] text-slate-500">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" /> Visitors
                 <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-[#06b6d4]" /> Leads
               </span>
@@ -334,13 +334,13 @@ function DashboardMockup() {
       </div>
 
       {/* bottom analytics bar */}
-      <div className="mt-2.5 flex items-center gap-2 rounded-2xl border border-white/10 bg-[#070f22] p-3">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#2563eb] to-[#06b6d4]">
-          <Bot className="h-4 w-4 text-white" />
+      <div className="mt-2.5 flex items-center gap-2 rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-rose-500 to-orange-500">
+          <Bot className="h-4 w-4 text-slate-900" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">
-            <span className="text-[11px] font-semibold text-white">
+            <span className="text-[11px] font-semibold text-slate-900">
               AI Assistant
             </span>
             <span className="flex items-center gap-1 text-[9px] text-[#38bdf8]">
@@ -352,7 +352,7 @@ function DashboardMockup() {
             <span className="h-1.5 w-1.5 rounded-full bg-white/40 animate-bounce [animation-delay:-0.2s]" />
             <span className="h-1.5 w-1.5 rounded-full bg-white/40 animate-bounce [animation-delay:-0.1s]" />
             <span className="h-1.5 w-1.5 rounded-full bg-white/40 animate-bounce" />
-            <span className="ml-1.5 text-[10px] text-slate-400">
+            <span className="ml-1.5 text-[10px] text-slate-500">
               Optimizing your landing page…
             </span>
           </div>
@@ -374,14 +374,14 @@ function PerfCard({
   delta: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#070f22] p-3">
-      <div className="flex items-center gap-1.5 text-slate-400">
-        <span className="flex h-6 w-6 items-center justify-center rounded-md bg-white/5 text-[#38bdf8]">
+    <div className="rounded-2xl border border-slate-900/10 bg-[#070f22] p-3">
+      <div className="flex items-center gap-1.5 text-slate-500">
+        <span className="flex h-6 w-6 items-center justify-center rounded-md bg-slate-900/5 text-[#38bdf8]">
           {icon}
         </span>
         <span className="text-[10px]">{label}</span>
       </div>
-      <div className="mt-1.5 text-base font-bold text-white">{value}</div>
+      <div className="mt-1.5 text-base font-bold text-slate-900">{value}</div>
       <div className="text-[9px] font-semibold text-[#22c55e]">{delta}</div>
     </div>
   );
@@ -402,12 +402,12 @@ function FloatingLeadCard() {
         className="glass-strong w-44 rounded-2xl p-3 glow-blue-sm"
       >
         <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#22c55e] to-[#0d9488] text-white">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#22c55e] to-[#0d9488] text-slate-900">
             <Bell className="h-4 w-4" />
           </span>
           <div>
-            <div className="text-[10px] text-slate-400">New lead</div>
-            <div className="text-xs font-semibold text-white">
+            <div className="text-[10px] text-slate-500">New lead</div>
+            <div className="text-xs font-semibold text-slate-900">
               Sarah just signed up
             </div>
           </div>
@@ -417,7 +417,7 @@ function FloatingLeadCard() {
             initial={{ width: "0%" }}
             animate={{ width: "72%" }}
             transition={{ duration: 1.4, delay: 1 }}
-            className="h-full rounded-full bg-gradient-to-r from-[#3b82f6] to-[#06b6d4]"
+            className="h-full rounded-full bg-gradient-to-r from-rose-500 to-orange-500"
           />
         </div>
       </motion.div>
@@ -439,10 +439,10 @@ function FloatingStatCard() {
         className="glass-strong w-40 rounded-2xl p-3 glow-cyan"
       >
         <div className="flex items-center justify-between">
-          <span className="text-[10px] text-slate-400">Revenue</span>
+          <span className="text-[10px] text-slate-500">Revenue</span>
           <TrendingUp className="h-3.5 w-3.5 text-[#22c55e]" />
         </div>
-        <div className="mt-1 text-xl font-bold text-white">$48.2K</div>
+        <div className="mt-1 text-xl font-bold text-slate-900">$48.2K</div>
         <div className="text-[9px] font-semibold text-[#22c55e]">
           +24% this month
         </div>
@@ -464,10 +464,10 @@ function FloatingAIWidget() {
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
         className="glass-strong flex items-center gap-2 rounded-full py-2 pl-2 pr-4 glow-blue-sm"
       >
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#2563eb] to-[#06b6d4]">
-          <Bot className="h-4 w-4 text-white" />
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500">
+          <Bot className="h-4 w-4 text-slate-900" />
         </span>
-        <span className="text-xs font-medium text-white">
+        <span className="text-xs font-medium text-slate-900">
           AI optimized 3 pages
         </span>
       </motion.div>

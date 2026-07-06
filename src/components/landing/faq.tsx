@@ -67,19 +67,19 @@ export function FAQ() {
             <AccordionItem
               key={f.q}
               value={`faq-${i}`}
-              className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] px-5 backdrop-blur-sm transition-all duration-300 data-[state=open]:border-[#3b82f6]/40 data-[state=open]:bg-[#3b82f6]/[0.06] data-[state=open]:shadow-[0_8px_40px_-12px_rgba(37,99,235,0.4)]"
+              className="group overflow-hidden rounded-2xl border border-slate-900/10 bg-white/[0.03] px-5 backdrop-blur-sm transition-all duration-300 data-[state=open]:border-[#3b82f6]/40 data-[state=open]:bg-[#3b82f6]/[0.06] data-[state=open]:shadow-[0_8px_40px_-12px_rgba(37,99,235,0.4)]"
             >
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-3 py-2 text-left">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/5 text-[#38bdf8] transition-colors duration-300 group-data-[state=open]:bg-gradient-to-br group-data-[state=open]:from-[#2563eb] group-data-[state=open]:to-[#06b6d4] group-data-[state=open]:text-white">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 text-[#38bdf8] transition-colors duration-300 group-data-[state=open]:bg-gradient-to-br group-data-[state=open]:from-rose-500 group-data-[state=open]:to-orange-500 group-data-[state=open]:text-slate-900">
                     <HelpCircle className="h-4 w-4" />
                   </span>
-                  <span className="text-base font-semibold text-white">
+                  <span className="text-base font-semibold text-slate-900">
                     {f.q}
                   </span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="pb-5 pt-1 text-sm leading-relaxed text-slate-300/90">
+              <AccordionContent className="pb-5 pt-1 text-sm leading-relaxed text-slate-600/90">
                 <div className="pl-10">{f.a}</div>
               </AccordionContent>
             </AccordionItem>
@@ -95,14 +95,14 @@ export function FAQ() {
         transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
         className="mt-10 flex flex-col items-center justify-center gap-4 rounded-2xl glass-card p-6 text-center sm:flex-row sm:text-left"
       >
-        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#2563eb] to-[#06b6d4]">
-          <MessageSquareMore className="h-5 w-5 text-white" />
+        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-orange-500">
+          <MessageSquareMore className="h-5 w-5 text-slate-900" />
         </span>
         <div className="flex-1">
-          <p className="text-sm font-semibold text-white">
+          <p className="text-sm font-semibold text-slate-900">
             Still have questions?
           </p>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-500">
             Chat with our team and get answers in minutes, not days.
           </p>
         </div>

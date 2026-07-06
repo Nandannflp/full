@@ -11,7 +11,7 @@ const TESTIMONIALS = [
     name: "Sarah Chen",
     role: "CEO, Nebula Finance",
     initials: "SC",
-    gradient: "from-[#2563eb] to-[#3b82f6]",
+    gradient: "from-rose-500 to-[#3b82f6]",
     review:
       "Adwiser transformed our lead pipeline. Within 3 months we saw a 212% increase in qualified leads. Their AI automation runs our entire nurture sequence.",
     rating: 5,
@@ -21,7 +21,7 @@ const TESTIMONIALS = [
     name: "Marcus Reid",
     role: "Founder, Vertex Commerce",
     initials: "MR",
-    gradient: "from-[#3b82f6] to-[#06b6d4]",
+    gradient: "from-rose-500 to-orange-500",
     review:
       "The website they built is genuinely award-worthy. Fast, beautiful, and it converts. Our AOV jumped 340% after launch. Worth every penny.",
     rating: 5,
@@ -51,7 +51,7 @@ const TESTIMONIALS = [
     name: "Elena Voss",
     role: "VP Growth, Pulse Analytics",
     initials: "EV",
-    gradient: "from-[#2563eb] to-[#06b6d4]",
+    gradient: "from-rose-500 to-orange-500",
     review:
       "We process 10M+ events a day and their dashboards make it all legible. The automation alone saved us 30 hours a week.",
     rating: 5,
@@ -61,7 +61,7 @@ const TESTIMONIALS = [
     name: "Tom Bradley",
     role: "Owner, Bradley & Co",
     initials: "TB",
-    gradient: "from-[#3b82f6] to-[#38bdf8]",
+    gradient: "from-rose-500 to-[#38bdf8]",
     review:
       "I've worked with many agencies. None come close to Adwiser's blend of design taste and technical depth. True partners.",
     rating: 5,
@@ -107,20 +107,20 @@ export function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="relative z-10 text-sm leading-relaxed text-slate-200">
+              <p className="relative z-10 text-sm leading-relaxed text-slate-700">
                 "{t.review}"
               </p>
-              <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
+              <div className="mt-6 flex items-center gap-3 border-t border-slate-900/10 pt-4">
                 <span
-                  className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-sm font-bold text-white ring-2 ring-white/10`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-sm font-bold text-slate-900 ring-2 ring-white/10`}
                 >
                   {t.initials}
                 </span>
                 <div>
-                  <div className="text-sm font-semibold text-white">
+                  <div className="text-sm font-semibold text-slate-900">
                     {t.name}
                   </div>
-                  <div className="text-xs text-slate-400">{t.role}</div>
+                  <div className="text-xs text-slate-500">{t.role}</div>
                 </div>
               </div>
             </motion.div>

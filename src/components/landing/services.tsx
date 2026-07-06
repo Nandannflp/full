@@ -20,7 +20,7 @@ const SERVICES = [
       "Smart nurture sequences",
       "Real-time CRM sync",
     ],
-    accent: "from-[#2563eb] to-[#3b82f6]",
+    accent: "from-rose-500 to-[#3b82f6]",
     visual: <LeadGenVisual />,
   },
   {
@@ -36,7 +36,7 @@ const SERVICES = [
       "SEO-ready architecture",
       "Headless CMS",
     ],
-    accent: "from-[#3b82f6] to-[#06b6d4]",
+    accent: "from-rose-500 to-orange-500",
     visual: <WebDevVisual />,
   },
   {
@@ -91,7 +91,7 @@ export function Services() {
             />
 
             {/* visual */}
-            <div className="relative mb-6 h-40 overflow-hidden rounded-2xl border border-white/10 bg-[#070f22]">
+            <div className="relative mb-6 h-40 overflow-hidden rounded-2xl border border-slate-900/10 bg-[#070f22]">
               {s.visual}
             </div>
 
@@ -100,15 +100,15 @@ export function Services() {
               <span
                 className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${s.accent} shadow-[0_8px_24px_-8px_rgba(37,99,235,0.7)]`}
               >
-                <s.icon className="h-5 w-5 text-white" />
+                <s.icon className="h-5 w-5 text-slate-900" />
               </span>
               <div>
-                <h3 className="text-lg font-bold text-white">{s.title}</h3>
+                <h3 className="text-lg font-bold text-slate-900">{s.title}</h3>
                 <p className="text-xs text-[#38bdf8]">{s.tagline}</p>
               </div>
             </div>
 
-            <p className="text-sm leading-relaxed text-slate-300/85">
+            <p className="text-sm leading-relaxed text-slate-600/85">
               {s.description}
             </p>
 
@@ -116,7 +116,7 @@ export function Services() {
               {s.points.map((p) => (
                 <li
                   key={p}
-                  className="flex items-center gap-1.5 text-xs text-slate-300"
+                  className="flex items-center gap-1.5 text-xs text-slate-600"
                 >
                   <Check className="h-3.5 w-3.5 shrink-0 text-[#38bdf8]" />
                   {p}
@@ -126,7 +126,7 @@ export function Services() {
 
             <a
               href="#contact"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-colors hover:text-[#38bdf8]"
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#38bdf8]"
             >
               Learn more
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -146,8 +146,8 @@ function LeadGenVisual() {
       {/* funnel */}
       <div className="relative flex flex-col items-center gap-1.5 pt-2">
         {[
-          { w: "w-full", l: "Visitors", n: "12,480", c: "text-slate-300" },
-          { w: "w-[78%]", l: "Engaged", n: "6,210", c: "text-slate-300" },
+          { w: "w-full", l: "Visitors", n: "12,480", c: "text-slate-600" },
+          { w: "w-[78%]", l: "Engaged", n: "6,210", c: "text-slate-600" },
           { w: "w-[54%]", l: "Qualified", n: "2,940", c: "text-[#38bdf8]" },
           { w: "w-[32%]", l: "Leads", n: "812", c: "text-[#06b6d4]" },
         ].map((row, i) => (
@@ -157,10 +157,10 @@ function LeadGenVisual() {
             whileInView={{ opacity: 1, scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.12, ease: EASE }}
-            className={`relative ${row.w} rounded-lg border border-white/10 bg-gradient-to-r from-[#0d1830] to-[#0a1430] px-3 py-1.5`}
+            className={`relative ${row.w} rounded-lg border border-slate-900/10 bg-gradient-to-r from-[#0d1830] to-[#0a1430] px-3 py-1.5`}
           >
             <div className="flex items-center justify-between text-[10px]">
-              <span className="text-slate-400">{row.l}</span>
+              <span className="text-slate-500">{row.l}</span>
               <span className={`font-bold ${row.c}`}>{row.n}</span>
             </div>
           </motion.div>
@@ -180,12 +180,12 @@ function WebDevVisual() {
   return (
     <div className="relative h-full w-full p-3">
       {/* browser mockup */}
-      <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0a1428]">
-        <div className="flex items-center gap-1 border-b border-white/10 bg-white/5 px-2 py-1.5">
+      <div className="overflow-hidden rounded-xl border border-slate-900/10 bg-[#0a1428]">
+        <div className="flex items-center gap-1 border-b border-slate-900/10 bg-slate-900/5 px-2 py-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-[#ef4444]/70" />
           <span className="h-1.5 w-1.5 rounded-full bg-[#f59e0b]/70" />
           <span className="h-1.5 w-1.5 rounded-full bg-[#22c55e]/70" />
-          <div className="ml-2 h-3 flex-1 rounded-full bg-white/5" />
+          <div className="ml-2 h-3 flex-1 rounded-full bg-slate-900/5" />
         </div>
         <div className="p-3">
           <motion.div
@@ -200,7 +200,7 @@ function WebDevVisual() {
             whileInView={{ width: "45%" }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.15, ease: EASE }}
-            className="mt-1.5 h-2.5 rounded-full bg-gradient-to-r from-[#38bdf8] to-[#06b6d4]"
+            className="mt-1.5 h-2.5 rounded-full bg-gradient-to-r from-[#38bdf8] to-orange-500"
           />
           <div className="mt-3 grid grid-cols-3 gap-1.5">
             {[0, 1, 2].map((i) => (
@@ -210,7 +210,7 @@ function WebDevVisual() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                className="h-8 rounded-md bg-white/5"
+                className="h-8 rounded-md bg-slate-900/5"
               />
             ))}
           </div>
@@ -307,7 +307,7 @@ function AIVisual() {
           />
         ))}
       </svg>
-      <div className="absolute bottom-2 left-3 right-3 rounded-md bg-white/5 px-2 py-1 font-mono text-[9px] text-slate-400">
+      <div className="absolute bottom-2 left-3 right-3 rounded-md bg-slate-900/5 px-2 py-1 font-mono text-[9px] text-slate-500">
         <span className="text-[#38bdf8]">ai.run</span>(workflow){" "}
         <span className="text-[#22c55e]">→ automated</span>
       </div>

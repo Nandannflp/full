@@ -35,17 +35,17 @@ export function Navbar() {
       <nav
         className={`flex w-full max-w-7xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 sm:px-6 ${
           scrolled
-            ? "glass-strong shadow-[0_8px_40px_-12px_rgba(2,6,23,0.9)]"
+            ? "glass-strong shadow-[0_8px_40px_-12px_rgba(15,23,42,0.1)]"
             : "border border-transparent bg-transparent"
         }`}
       >
         {/* Logo */}
         <a href="#home" className="group flex items-center gap-2.5">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#2563eb] via-[#3b82f6] to-[#06b6d4] shadow-[0_0_24px_-4px_rgba(59,130,246,0.7)]">
-            <Sparkles className="h-5 w-5 text-white" />
+          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 via-orange-400 to-orange-500 shadow-[0_0_24px_-4px_rgba(59,130,246,0.7)]">
+            <Sparkles className="h-5 w-5 text-slate-900" />
             <span className="absolute inset-0 rounded-xl ring-1 ring-white/20" />
           </span>
-          <span className="text-lg font-bold tracking-tight text-white">
+          <span className="text-lg font-bold tracking-tight text-slate-900">
             Adwiser
           </span>
         </a>
@@ -56,10 +56,10 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="group relative rounded-lg px-3.5 py-2 text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                className="group relative rounded-lg px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900"
               >
                 {l.label}
-                <span className="absolute inset-x-3.5 -bottom-0.5 h-px origin-left scale-x-0 bg-gradient-to-r from-[#3b82f6] to-[#06b6d4] transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-3.5 -bottom-0.5 h-px origin-left scale-x-0 bg-gradient-to-r from-rose-500 to-orange-500 transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             </li>
           ))}
@@ -69,7 +69,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="#contact"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+            className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-900"
           >
             Sign in
           </a>
@@ -86,7 +86,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-900/10 bg-slate-900/5 text-slate-900 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -111,7 +111,7 @@ export function Navbar() {
                     <a
                       href={l.href}
                       onClick={() => setOpen(false)}
-                      className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition-colors hover:bg-white/5 hover:text-white"
+                      className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-900/5 hover:text-slate-900"
                     >
                       {l.label}
                     </a>

@@ -52,9 +52,9 @@ export function CTA() {
       id="contact"
       className="relative mx-auto w-full max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28"
     >
-      <div className="relative overflow-hidden rounded-[32px] border border-white/10 px-6 py-14 sm:px-12 sm:py-16 lg:px-20 lg:py-20">
+      <div className="relative overflow-hidden rounded-[32px] border border-slate-900/10 px-6 py-14 sm:px-12 sm:py-16 lg:px-20 lg:py-20">
         {/* animated aurora background */}
-        <div className="absolute inset-0 -z-10 bg-[#020617]" />
+        <div className="absolute inset-0 -z-10 bg-white" />
         <div
           className="absolute inset-0 -z-10 gradient-animate opacity-90"
           style={{
@@ -88,7 +88,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-            className="mt-5 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
           >
             Ready To Scale Faster?
           </motion.h2>
@@ -98,7 +98,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-            className="mx-auto mt-5 max-w-xl text-pretty text-base text-slate-200/90 sm:text-lg"
+            className="mx-auto mt-5 max-w-xl text-pretty text-base text-slate-700/90 sm:text-lg"
           >
             Join 500+ brands growing with Adwiser. Get a free strategy session
             and a custom growth roadmap in 24 hours.
@@ -113,14 +113,14 @@ export function CTA() {
             className="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row"
           >
             <div className="relative flex-1">
-              <Mail className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+              <Mail className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@company.com"
                 aria-label="Email address"
-                className="h-12 w-full rounded-xl border border-white/15 bg-white/10 pl-10 pr-4 text-sm text-white placeholder:text-slate-400 backdrop-blur-md transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/40"
+                className="h-12 w-full rounded-xl border border-white/15 bg-white/10 pl-10 pr-4 text-sm text-slate-900 placeholder:text-slate-500 backdrop-blur-md transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/40"
               />
             </div>
             <Magnetic strength={0.25}>
@@ -147,7 +147,7 @@ export function CTA() {
             </Magnetic>
           </motion.form>
 
-          <p className="mt-4 text-xs text-slate-300/70">
+          <p className="mt-4 text-xs text-slate-600/70">
             No spam. Unsubscribe anytime. We respect your privacy.
           </p>
         </div>
