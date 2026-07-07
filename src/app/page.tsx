@@ -3,6 +3,7 @@
 import { AuroraBackground } from "@/components/landing/aurora-background";
 import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
+import { LogosMarquee } from "@/components/landing/logos-marquee";
 import { Services } from "@/components/landing/services";
 import { Solutions } from "@/components/landing/solutions";
 import { Stats } from "@/components/landing/stats";
@@ -26,6 +27,7 @@ export default function Home() {
       <Navbar />
       <main id="main" className="flex-1">
         <Hero />
+        <LogosMarquee />
         <Services />
         <Solutions />
         <Stats />
