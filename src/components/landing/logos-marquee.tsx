@@ -28,7 +28,7 @@ export function LogosMarquee() {
         Powered By
       </p>
 
-      <div className="flex flex-wrap items-center justify-center gap-12 sm:gap-16 lg:gap-20">
+      <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10 lg:gap-14">
         {PARTNERS.map((logo, i) => (
           <motion.div
             key={logo.name}
@@ -38,13 +38,13 @@ export function LogosMarquee() {
             transition={{ duration: 0.4, delay: i * 0.07, ease: EASE }}
             className="group flex flex-col items-center gap-3"
           >
-            <div className="relative h-16 w-32 opacity-70 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="relative h-24 w-44 opacity-70 transition-opacity duration-300 group-hover:opacity-100">
               <Image
                 src={logo.src}
                 alt={`${logo.name} logo`}
                 fill
                 className="object-contain"
-                sizes="128px"
+                sizes="176px"
               />
             </div>
             <span className="text-sm font-semibold tracking-wide text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
