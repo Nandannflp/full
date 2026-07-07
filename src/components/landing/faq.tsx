@@ -42,7 +42,7 @@ const FAQS = [
 
 export function FAQ() {
   return (
-    <section className="relative mx-auto w-full max-w-4xl px-4 py-20 sm:px-6 lg:py-28">
+    <section id="faq" className="relative mx-auto w-full max-w-4xl px-4 py-20 sm:px-6 lg:py-28">
       <SectionHeading
         kicker="FAQ"
         title="Questions, meet"

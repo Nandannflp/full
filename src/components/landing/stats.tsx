@@ -42,7 +42,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
+    <section id="why-adwiser" className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:py-20">
       <div className="relative overflow-hidden rounded-[28px] glass-card p-8 sm:p-12">
         {/* glow accents */}
         <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-[#2563eb]/20 blur-3xl" />

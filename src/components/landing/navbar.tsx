@@ -9,9 +9,10 @@ import { ThemeToggle } from "./theme-toggle";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-
   { label: "Solutions", href: "#solutions" },
-
+  { label: "Why Adwiser?", href: "#why-adwiser" },
+  { label: "Founder & Team", href: "#founder-team" },
+  { label: "FAQs", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
