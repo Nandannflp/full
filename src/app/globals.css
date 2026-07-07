@@ -6,8 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -64,7 +64,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-sans), system-ui, sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -75,25 +75,25 @@
   
   /* Typography Scale */
   h1 {
-    font-family: var(--font-space-grotesk), sans-serif;
+    font-family: var(--font-display), sans-serif;
     font-weight: 800;
     line-height: 0.9;
     letter-spacing: -0.05em;
   }
   h2 {
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-display), sans-serif;
     font-size: 64px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
   h3 {
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.01em;
   }
   h4 {
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-size: 28px;
     font-weight: 500;
   }
@@ -134,21 +134,34 @@
 
 /* ============ Glassmorphism ============ */
 .glass {
-  background: rgba(10, 10, 10, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+.dark .glass {
+  background: rgba(10, 10, 10, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .glass-strong {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+.dark .glass-strong {
+  background: rgba(10, 10, 10, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .glass-card {
-  background: linear-gradient(160deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.7) 100%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.85) 0%, rgba(241, 245, 249, 0.75) 100%);
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+.dark .glass-card {
+  background: linear-gradient(160deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.7) 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
 }
@@ -231,11 +244,16 @@
   box-shadow: 0 14px 44px -6px rgba(244, 63, 94, 0.6), 0 0 0 1px rgba(244, 63, 94, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
 }
 .btn-ghost-glass {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.04);
   backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+.dark .btn-ghost-glass {
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #F5F5F5;
-  transition: all 0.3s ease;
 }
 .btn-ghost-glass:hover {
   background: rgba(244, 63, 94, 0.08);
