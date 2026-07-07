@@ -9,6 +9,7 @@ import { ThemeToggle } from "./theme-toggle";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
+  { label: "All Services ↗", href: "/services" },
   { label: "Solutions", href: "#solutions" },
   { label: "Why Adwiser?", href: "#why-adwiser" },
   { label: "Founder & Team", href: "#founder-team" },
@@ -16,6 +17,7 @@ const NAV_LINKS = [
   { label: "FAQs", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
+
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
