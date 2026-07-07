@@ -170,7 +170,7 @@ function DashboardMockup() {
   const visitors = useCounter(24580, 1600, 300);
   const conversion = useCounter(78, 1400, 500);
   const leads = useCounter(312, 1200, 600);
-  const revenue = useCounter(48200, 1800, 400);
+  const revenue = useCounter(4020000, 1800, 400);
 
   const PERF = [
     { icon: <Users className="h-3.5 w-3.5" />, label: "Visitors", raw: 24580, display: "24.5K", delta: "+12%", color: "#3b82f6", ref: visitors },
@@ -225,7 +225,7 @@ function DashboardMockup() {
               <div>
                 <p className="text-[9px] text-slate-500 uppercase tracking-wider">Total Revenue</p>
                 <p className="text-2xl font-bold text-white mt-0.5">
-                  $<span ref={revenue.ref}>{revenue.val.toLocaleString()}</span>
+                  ₹<span ref={revenue.ref}>{(revenue.val / 100000).toFixed(1)}L</span>
                 </p>
               </div>
               <span className="flex items-center gap-1 rounded-full bg-[#22c55e]/15 px-2 py-0.5 text-[9px] font-semibold text-[#22c55e]">
@@ -406,7 +406,7 @@ function FloatingStatCard() {
           <span className="text-[10px] text-muted-foreground">Revenue</span>
           <TrendingUp className="h-3.5 w-3.5 text-[#22c55e]" />
         </div>
-        <div className="mt-1 text-xl font-bold text-foreground">$48.2K</div>
+        <div className="mt-1 text-xl font-bold text-foreground">₹40.2L</div>
         <div className="text-[9px] font-semibold text-[#22c55e]">+24% this month</div>
         <div className="mt-2 flex h-6 items-end gap-0.5">
           {[40, 55, 48, 70, 62, 85, 100].map((h, i) => (
