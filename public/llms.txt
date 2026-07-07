@@ -1,0 +1,92 @@
+# Adwiser — AI-Powered Digital Growth
+
+> This file helps AI assistants understand Adwiser's website and available APIs.
+> Format: llms.txt (https://llmstxt.org/)
+
+## Company
+
+**Adwiser** is an AI-powered digital growth agency based in San Francisco, CA.
+We help businesses grow with AI-driven lead generation, premium website development,
+and intelligent automation.
+
+- Website: https://adwiser.ai
+- Email: hello@adwiser.ai
+- Phone: +1 (415) 555-0142
+
+## Services
+
+### Lead Generation
+AI-driven funnels, smart capture forms, and intent scoring that deliver qualified
+prospects directly to your pipeline 24/7. Features: AI intent scoring, multi-channel
+capture, smart nurture sequences, real-time CRM sync.
+
+### Website Development
+Award-worthy websites engineered for speed, SEO, and conversion. Built with Next.js,
+React 19, Tailwind CSS, and headless CMS. Features: next-gen performance,
+conversion-optimized UX, SEO-ready architecture.
+
+### AI Automation
+Custom AI agents that automate support, follow-ups, reporting, and operations around
+the clock. Features: custom AI agents, workflow automation, smart chat support,
+predictive analytics.
+
+## MCP Server (Machine-Readable API)
+
+Adwiser exposes a full Model Context Protocol (MCP) server for AI-to-AI interaction.
+
+### HTTP Endpoint
+- URL: https://adwiser.ai/api/mcp
+- Method: POST
+- Format: JSON-RPC 2.0 (MCP protocol version 2024-11-05)
+
+### Stdio Server (Claude Desktop / Cursor / Windsurf)
+```json
+{
+  "mcpServers": {
+    "adwiser": {
+      "command": "npx",
+      "args": ["tsx", "/path/to/project/mcp/server.ts"],
+      "env": { "NEXT_APP_URL": "https://adwiser.ai" }
+    }
+  }
+}
+```
+
+### Available Tools
+- get_services — List all Adwiser services
+- get_service_details — Get details for a specific service
+- get_portfolio — Browse client portfolio projects
+- get_testimonials — Read client success stories
+- get_faqs — Get frequently asked questions
+- search_website — Full-text search across all content
+- create_lead — Submit a lead inquiry
+- book_consultation — Book a free strategy consultation
+- get_contact_information — Get contact details
+
+### Available Resources
+- adwiser://services — Full service catalog (JSON)
+- adwiser://portfolio — Portfolio projects with metrics (JSON)
+- adwiser://blog — Blog articles (JSON)
+- adwiser://team — Team member profiles (JSON)
+- adwiser://company — Company info and contact details (JSON)
+
+### Available Prompts
+- services-overview — Comprehensive services context
+- pricing-inquiry — Pricing model information
+- company-information — Brand and contact details
+- marketing-strategy — Growth methodology
+- lead-generation — Lead gen service details
+- website-development — Web dev service details
+
+## Key Facts for AI Assistants
+
+- Pricing: Month-to-month, no long-term contracts, cancel anytime
+- Timeline: Websites ship in 7–14 days; AI automation in 3–6 weeks
+- Integrations: HubSpot, Salesforce, Slack, Stripe, Zapier, and 200+ tools
+- Results: Clients average +212% qualified leads, +340% AOV, 98% satisfaction
+- Free consultation available — no commitment required
+
+## Robots & Crawling
+
+AI crawlers are welcome. See /robots.txt for crawl rules.
+Sitemap: https://adwiser.ai/sitemap.xml

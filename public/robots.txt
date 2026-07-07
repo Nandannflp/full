@@ -1,3 +1,7 @@
+User-agent: *
+Allow: /
+
+# Search engine crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +14,35 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+# AI crawlers — explicitly welcome
+User-agent: GPTBot
 Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# AI-readable files
+Allow: /llms.txt
+Allow: /sitemap.xml
+Allow: /api/mcp
+
+# Sitemap
+Sitemap: https://adwiser.ai/sitemap.xml
+
+# LLM discovery
+LLMs-txt: https://adwiser.ai/llms.txt
