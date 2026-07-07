@@ -2,50 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, CheckCircle2, Sparkles, Loader2 } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Magnetic } from "./magnetic";
-import { toast } from "sonner";
+import { BookCallModal } from "./book-call-modal";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function CTA() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (loading || submitted) return;
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      toast.error("Please enter a valid email address.");
-      return;
-    }
-    setLoading(true);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: "landing_cta" }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || !data.ok) {
-        throw new Error(data?.error || "Request failed");
-      }
-      setSubmitted(true);
-      toast.success(
-        data.message ||
-          "You're on the list! We'll be in touch within 24 hours."
-      );
-      setEmail("");
-      setTimeout(() => setSubmitted(false), 4000);
-    } catch (err) {
-      toast.error(
-        err instanceof Error ? err.message : "Something went wrong. Try again."
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section
@@ -104,54 +68,27 @@ export function CTA() {
             and a custom growth roadmap in 24 hours.
           </motion.p>
 
-          <motion.form
-            onSubmit={onSubmit}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
-            className="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row"
+            className="mx-auto mt-8 flex justify-center w-full max-w-md"
           >
-            <div className="relative flex-1">
-              <Mail className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@company.com"
-                aria-label="Email address"
-                className="h-12 w-full rounded-xl border border-white/15 bg-[#0A0A0A]/10 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground backdrop-blur-md transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/40"
-              />
-            </div>
             <Magnetic strength={0.25}>
               <button
-                type="submit"
-                disabled={loading || submitted}
-                className="btn-primary-glow group inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-6 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-80"
+                onClick={() => setIsModalOpen(true)}
+                className="btn-primary-glow group inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-8 text-sm font-semibold"
               >
-                {submitted ? (
-                  <>
-                    <CheckCircle2 className="h-4 w-4" /> Sent!
-                  </>
-                ) : loading ? (
-                  <>
-                    <Loader2 className="h-4 w-4 animate-spin" /> Sending…
-                  </>
-                ) : (
-                  <>
-                    Let's Build Something Amazing
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </>
-                )}
+                Book a call
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
             </Magnetic>
-          </motion.form>
-
-          <p className="mt-4 text-xs text-muted-foreground/70">
-            No spam. Unsubscribe anytime. We respect your privacy.
-          </p>
+          </motion.div>
         </div>
       </div>
+
+      <BookCallModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
