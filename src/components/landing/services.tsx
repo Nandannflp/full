@@ -38,9 +38,7 @@ const SERVICES: Service[] = [
     description:
       "Craft a compelling personal brand that positions you as the definitive authority in your field — with a visual identity, voice, and story that resonate instantly.",
     benefit: "Stand out with a brand that speaks before you do",
-    color: "#8B5CF6",
-    rgb: "139,92,246",
-    dim: "rgba(139,92,246,0.12)",
+    color: "var(--color-primary)",
     category: "01 — Brand & Identity",
     cta: "Build My Brand",
     icon: "◈",
@@ -52,9 +50,7 @@ const SERVICES: Service[] = [
     description:
       "Data-backed content strategies that grow your audience and turn every post, reel, and article into a revenue-generating asset working around the clock.",
     benefit: "Every piece of content moves the needle measurably",
-    color: "#06B6D4",
-    rgb: "6,182,212",
-    dim: "rgba(6,182,212,0.12)",
+    color: "var(--color-secondary)",
     category: "02 — Growth & Content",
     cta: "Plan My Content",
     icon: "◉",
@@ -66,9 +62,7 @@ const SERVICES: Service[] = [
     description:
       "High-converting Meta ad campaigns engineered with a creative-first strategy, audience intelligence, and continuous AI-powered optimization for maximum ROAS.",
     benefit: "3× average ROAS for clients in the first 60 days",
-    color: "#3B82F6",
-    rgb: "59,130,246",
-    dim: "rgba(59,130,246,0.12)",
+    color: "var(--color-accent)",
     category: "03 — Paid Social",
     cta: "Launch Campaign",
     icon: "⬡",
@@ -80,9 +74,7 @@ const SERVICES: Service[] = [
     description:
       "Capture high-intent buyers at exactly the right moment with precision-tuned search, display, Performance Max, and shopping campaigns that turn clicks into customers.",
     benefit: "Appear when your customers are ready to buy",
-    color: "#F59E0B",
-    rgb: "245,158,11",
-    dim: "rgba(245,158,11,0.12)",
+    color: "var(--color-primary)",
     category: "04 — Paid Search",
     cta: "Start Advertising",
     icon: "◎",
@@ -94,9 +86,7 @@ const SERVICES: Service[] = [
     description:
       "Reach the most engaged young audience through full-screen immersive Snap ads, AR lenses, and story formats built for the scroll-stop generation.",
     benefit: "Access 750M+ monthly users with premium placements",
-    color: "#FBBF24",
-    rgb: "251,191,36",
-    dim: "rgba(251,191,36,0.12)",
+    color: "var(--color-secondary)",
     category: "05 — Paid Social",
     cta: "Run Snap Ads",
     icon: "◐",
@@ -108,9 +98,7 @@ const SERVICES: Service[] = [
     description:
       "Deliver unskippable premium ads across leading streaming platforms — reaching cord-cutters and digital natives where they're most attentive and brand-receptive.",
     benefit: "TV-level reach with surgical digital precision",
-    color: "#EF4444",
-    rgb: "239,68,68",
-    dim: "rgba(239,68,68,0.12)",
+    color: "var(--color-accent)",
     category: "06 — Connected TV",
     cta: "Go Live",
     icon: "▶",
@@ -122,9 +110,7 @@ const SERVICES: Service[] = [
     description:
       "AI-powered lead funnels that capture, score, and nurture your ideal prospects 24/7 — syncing qualified leads directly to your CRM without you lifting a finger.",
     benefit: "+212% qualified leads within 90 days — guaranteed",
-    color: "#10B981",
-    rgb: "16,185,129",
-    dim: "rgba(16,185,129,0.12)",
+    color: "var(--color-primary)",
     category: "07 — Growth",
     cta: "Generate Leads",
     icon: "◬",
@@ -136,9 +122,7 @@ const SERVICES: Service[] = [
     description:
       "High-impact poster and graphic design that stops thumbs mid-scroll — commanding instant attention across digital feeds, print media, and event promotions.",
     benefit: "Every design CRO-optimised for maximum visual impact",
-    color: "#EC4899",
-    rgb: "236,72,153",
-    dim: "rgba(236,72,153,0.12)",
+    color: "var(--color-secondary)",
     category: "08 — Design",
     cta: "Design My Poster",
     icon: "◧",
@@ -150,9 +134,7 @@ const SERVICES: Service[] = [
     description:
       "Custom thumbnails scientifically designed using eye-tracking principles to maximise click-through rates on YouTube, social feeds, and content discovery platforms.",
     benefit: "Up to 40% higher CTR vs. generic thumbnails",
-    color: "#F97316",
-    rgb: "249,115,22",
-    dim: "rgba(249,115,22,0.12)",
+    color: "var(--color-accent)",
     category: "09 — Design",
     cta: "Get Thumbnails",
     icon: "◫",
@@ -164,9 +146,7 @@ const SERVICES: Service[] = [
     description:
       "Expert account recovery for banned or restricted Instagram accounts — fast, reliable resolutions with ongoing monitoring and protection strategies post-reinstatement.",
     benefit: "94% account recovery rate within 48 hours",
-    color: "#A855F7",
-    rgb: "168,85,247",
-    dim: "rgba(168,85,247,0.12)",
+    color: "var(--color-primary)",
     category: "10 — Account Support",
     cta: "Recover Account",
     icon: "◍",
@@ -178,9 +158,7 @@ const SERVICES: Service[] = [
     description:
       "Cinematic video editing for reels, YouTube, brand films, and paid ads — colour-graded, sound-designed, and paced to command attention and drive real engagement.",
     benefit: "2× higher engagement on professionally edited content",
-    color: "#6366F1",
-    rgb: "99,102,241",
-    dim: "rgba(99,102,241,0.12)",
+    color: "var(--color-secondary)",
     category: "11 — Video Production",
     cta: "Edit My Video",
     icon: "⬟",
@@ -192,9 +170,7 @@ const SERVICES: Service[] = [
     description:
       "Resolve copyright strikes, impersonation issues, and IP disputes across all major social platforms — fast, decisive, with platform-certified expertise on your side.",
     benefit: "Platform-certified experts. Fast, decisive resolutions.",
-    color: "#F43F5E",
-    rgb: "244,63,94",
-    dim: "rgba(244,63,94,0.12)",
+    color: "var(--color-accent)",
     category: "12 — Legal & Support",
     cta: "Get Protection",
     icon: "◈",
@@ -305,7 +281,7 @@ export function Services() {
           counterRef.current.textContent = `${String(idx + 1).padStart(2, "0")} — ${String(SERVICES.length).padStart(2, "0")}`;
         // Glow blob colour
         if (glowBlobRef.current)
-          glowBlobRef.current.style.background = `radial-gradient(ellipse 65% 65% at 50% 50%, rgba(${svc.rgb},0.18) 0%, transparent 70%)`;
+          glowBlobRef.current.style.background = `radial-gradient(ellipse 65% 65% at 50% 50%, color-mix(in srgb, ${svc.color} 18%, transparent) 0%, transparent 70%)`;
         // Progress fill colour
         const pf = document.querySelector<HTMLElement>(".progress-fill");
         if (pf) pf.style.background = svc.color;
@@ -505,8 +481,8 @@ export function Services() {
       // ── matchMedia ───────────────────────────────────────────────────────
       const mm = gsap.matchMedia();
 
-      // ════════════════ DESKTOP ═══════════════════════════════════════════
-      mm.add("(min-width: 768px)", () => {
+      // ════════════════ DESKTOP & MOBILE (Pinned) ════════════════════════════
+      mm.add("all", () => {
         // Pin the services section
         const pin = ScrollTrigger.create({
           trigger: pinWrapperRef.current,
@@ -606,30 +582,6 @@ export function Services() {
         };
       });
 
-      // ════════════════ MOBILE ════════════════════════════════════════════
-      mm.add("(max-width: 767px)", () => {
-        // Mobile: remove absolute stacking, reveal each card on scroll
-        panelRefs.current.forEach((p) => {
-          if (p) {
-            gsap.set(p, { autoAlpha: 1, position: "relative", y: 0, clearProps: "position" });
-          }
-        });
-
-        document.querySelectorAll<HTMLElement>(".mobile-svc-card").forEach((card) => {
-          gsap.from(card, {
-            opacity: 0,
-            y: 46,
-            duration: 0.7,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 88%",
-              toggleActions: "play none none reverse",
-            },
-          });
-        });
-      });
-
       return () => {
         mm.revert();
         splitCache.current.forEach((s) => s?.revert());
@@ -678,12 +630,12 @@ export function Services() {
       {/* ─── DESKTOP: Pinned Scroll Hub ───────────────────────────────────── */}
       <div
         ref={pinWrapperRef}
-        className="hidden md:block"
+        className="block"
         aria-label="Services showcase"
       >
         <div
           ref={pinTargetRef}
-          className="h-screen relative flex bg-background overflow-hidden"
+          className="h-screen relative flex flex-col md:flex-row bg-background overflow-hidden"
         >
           {/* ── Background decorative grid ─── */}
           <div
@@ -712,13 +664,7 @@ export function Services() {
 
           {/* ══════ LEFT PANEL — Service text ══════ */}
           <div
-            style={{
-              width: "50%",
-              height: "100%",
-              position: "relative",
-              zIndex: 10,
-              padding: "5.5rem 3.5rem 4rem 4.5rem",
-            }}
+            className="w-full h-[55%] md:w-1/2 md:h-full relative z-10 p-6 pt-16 md:p-16 md:pt-28 lg:pl-20"
           >
             {SERVICES.map((svc, i) => (
               <div
@@ -733,7 +679,7 @@ export function Services() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
-                  padding: "5.5rem 3.5rem 4rem 4.5rem",
+                  padding: "1rem",
                   visibility: i === 0 ? "visible" : "hidden",
                   opacity: i === 0 ? 1 : 0,
                 }}
@@ -758,7 +704,7 @@ export function Services() {
                 {/* Title */}
                 <div style={{ marginBottom: "1.1rem", overflow: "hidden" }}>
                   <div
-                    className="svc-title font-display text-[clamp(3.5rem,5.2vw,5.8rem)] font-extrabold leading-[1.02] tracking-[-0.03em] text-foreground"
+                    className="svc-title font-display text-[clamp(2.5rem,5.2vw,5.8rem)] font-extrabold leading-[1.02] tracking-[-0.03em] text-foreground"
                     style={{ perspective: "600px" }}
                     dangerouslySetInnerHTML={{
                       __html: svc.title.replace("\n", "<br/>"),
@@ -854,7 +800,7 @@ export function Services() {
                     textDecoration: "none",
                     width: "fit-content",
                     transition: "opacity 0.2s, transform 0.2s",
-                    boxShadow: `0 0 24px rgba(${svc.rgb},0.3)`,
+                    boxShadow: `0 0 24px color-mix(in srgb, ${svc.color} 30%, transparent)`,
                   }}
                 >
                   {svc.cta}
@@ -866,15 +812,7 @@ export function Services() {
 
           {/* ══════ RIGHT PANEL — Visual / SVG ══════ */}
           <div
-            style={{
-              width: "50%",
-              height: "100%",
-              position: "relative",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 5,
-            }}
+            className="w-full h-[45%] md:w-1/2 md:h-full relative flex items-center justify-center z-5 p-4"
           >
             <div
               ref={bgNumRef}
@@ -889,8 +827,7 @@ export function Services() {
               style={{
                 width: "100%",
                 height: "100%",
-                maxWidth: "520px",
-                maxHeight: "520px",
+                maxWidth: "100%", maxHeight: "100%",
                 position: "relative",
                 zIndex: 1,
                 overflow: "visible",
@@ -998,7 +935,7 @@ export function Services() {
                 cx="200"
                 cy="110"
                 r="2.8"
-                fill="rgba(255,255,255,0.8)"
+                fill="var(--color-secondary)"
                 filter="url(#dot-glow)"
               />
               <circle
@@ -1018,7 +955,7 @@ export function Services() {
                 cx="52"
                 cy="200"
                 r="2"
-                fill="rgba(255,255,255,0.3)"
+                fill="var(--color-accent)"
               />
             </svg>
           </div>
@@ -1134,101 +1071,6 @@ export function Services() {
         </div>
       </div>
 
-      {/* ─── MOBILE: Vertical service cards ──────────────────────────────── */}
-      <div
-        className="block md:hidden"
-        style={{ paddingTop: "5rem", paddingBottom: "2rem" }}
-      >
-        <div style={{ padding: "0 1.5rem", marginBottom: "2rem" }}>
-          <h2
-            className="font-display text-4xl font-extrabold tracking-tight text-foreground mb-2"
-          >
-            Our Services
-          </h2>
-          <p className="text-[0.9rem] text-muted-foreground">
-            Scroll through all twelve.
-          </p>
-        </div>
-
-        {SERVICES.map((svc, i) => (
-          <div
-            key={svc.id}
-            className="mobile-svc-card mx-4 mb-4 p-7 rounded-2xl border bg-surface/5 backdrop-blur-md"
-            style={{
-              borderColor: `rgba(${svc.rgb},0.15)`,
-              background: `linear-gradient(135deg, rgba(${svc.rgb},0.05) 0%, var(--surface) 100%)`,
-            }}
-          >
-            <div
-              style={{
-                fontSize: "0.65rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-                color: svc.color,
-                marginBottom: "0.7rem",
-              }}
-            >
-              {svc.category}
-            </div>
-            <h3
-              className="font-display text-[1.9rem] font-extrabold leading-[1.05] tracking-tight text-foreground mb-3 whitespace-pre-line"
-            >
-              {svc.title}
-            </h3>
-            <p
-              className="text-[0.88rem] text-muted-foreground leading-[1.65] mb-4"
-            >
-              {svc.description}
-            </p>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                marginBottom: "1.2rem",
-              }}
-            >
-              <span
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "16px",
-                  height: "16px",
-                  borderRadius: "50%",
-                  background: svc.color,
-                  fontSize: "0.6rem",
-                  flexShrink: 0,
-                }}
-              >
-                ✓
-              </span>
-              <span className="text-[0.82rem] text-foreground/80 font-medium">
-                {svc.benefit}
-              </span>
-            </div>
-            <Link
-              href="/#contact"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.4rem",
-                padding: "0.6rem 1.3rem",
-                background: svc.color,
-                color: "#fff",
-                borderRadius: "100px",
-                fontSize: "0.82rem",
-                fontWeight: 600,
-                textDecoration: "none",
-                boxShadow: `0 0 20px rgba(${svc.rgb},0.25)`,
-              }}
-            >
-              {svc.cta}
-              <ArrowRight size={13} />
-            </Link>
-          </div>
-        ))}
       </div>
     </div>
   );

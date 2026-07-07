@@ -23,13 +23,13 @@ export function CTA() {
           className="absolute inset-0 -z-10 gradient-animate opacity-90"
           style={{
             background:
-              "linear-gradient(120deg, rgba(37,99,235,0.35), rgba(6,182,212,0.25), rgba(59,130,246,0.35), rgba(56,189,248,0.2))",
+              "linear-gradient(120deg, color-mix(in srgb, var(--color-primary) 35%, transparent), color-mix(in srgb, var(--color-secondary) 25%, transparent), color-mix(in srgb, var(--color-primary) 35%, transparent), color-mix(in srgb, var(--color-accent) 20%, transparent))",
           }}
         />
         <div className="absolute inset-0 -z-10">
-          <div className="absolute -left-10 top-0 h-72 w-72 rounded-full bg-[#2563eb]/40 blur-[100px] animate-aurora" />
+          <div className="absolute -left-10 top-0 h-72 w-72 rounded-full bg-primary/40 blur-[100px] animate-aurora" />
           <div
-            className="absolute -right-10 bottom-0 h-72 w-72 rounded-full bg-[#06b6d4]/40 blur-[100px] animate-aurora"
+            className="absolute -right-10 bottom-0 h-72 w-72 rounded-full bg-accent/40 blur-[100px] animate-aurora"
             style={{ animationDelay: "-8s" }}
           />
         </div>

@@ -83,8 +83,8 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: EASE }} className="mb-6 inline-flex">
           <span className="kicker">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#38bdf8] opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#38bdf8]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-secondary" />
             </span>
             AI-Powered Digital Growth Platform
           </span>
@@ -100,7 +100,7 @@ export function Hero() {
                 initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.1, delay: 0.6, ease: EASE }} />
               <defs>
                 <linearGradient id="under" x1="0" y1="0" x2="300" y2="0">
-                  <stop stopColor="#2563eb" /><stop offset="0.5" stopColor="#38bdf8" /><stop offset="1" stopColor="#06b6d4" />
+                  <stop stopColor="var(--color-primary)" /><stop offset="0.5" stopColor="var(--color-secondary)" /><stop offset="1" stopColor="var(--color-accent)" />
                 </linearGradient>
               </defs>
             </svg>
@@ -125,7 +125,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE, delay: 0.35 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row xl:justify-start">
           <div className="flex -space-x-2.5">
-            {["from-rose-500 to-[#3b82f6]", "from-rose-500 to-orange-500", "from-[#06b6d4] to-[#38bdf8]", "from-[#38bdf8] to-[#2563eb]"].map((g, i) => (
+            {["from-rose-500 to-primary", "from-rose-500 to-orange-500", "from-accent to-secondary", "from-secondary to-primary"].map((g, i) => (
               <span key={i} className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${g} text-xs font-bold text-white ring-2 ring-background`}>
                 {["A", "K", "M", "S"][i]}
               </span>
@@ -133,7 +133,7 @@ export function Hero() {
           </div>
           <div className="text-center sm:text-left">
             <div className="flex items-center justify-center gap-1 sm:justify-start">
-              {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-[#38bdf8] text-[#38bdf8]" />)}
+              {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />)}
             </div>
             <p className="mt-1 text-sm text-muted-foreground">
               Trusted by <span className="font-semibold text-foreground">500+</span> growing brands
@@ -168,9 +168,9 @@ function DashboardMockup() {
   const revenue = useCounter(4020000, 1800, 400);
 
   const PERF = [
-    { icon: <Users className="h-3.5 w-3.5" />, label: "Visitors", raw: 24580, display: "24.5K", delta: "+12%", color: "#3b82f6", ref: visitors },
-    { icon: <MousePointer className="h-3.5 w-3.5" />, label: "Conversion", raw: 78, display: "7.8%", delta: "+2.4%", color: "#06b6d4", ref: conversion },
-    { icon: <Target className="h-3.5 w-3.5" />, label: "New Leads", raw: 312, display: "312", delta: "+18%", color: "#22c55e", ref: leads },
+    { icon: <Users className="h-3.5 w-3.5" />, label: "Visitors", raw: 24580, display: "24.5K", delta: "+12%", color: "var(--color-primary)", ref: visitors },
+    { icon: <MousePointer className="h-3.5 w-3.5" />, label: "Conversion", raw: 78, display: "7.8%", delta: "+2.4%", color: "var(--color-accent)", ref: conversion },
+    { icon: <Target className="h-3.5 w-3.5" />, label: "New Leads", raw: 312, display: "312", delta: "+18%", color: "var(--color-accent)", ref: leads },
   ];
 
   return (
@@ -184,13 +184,13 @@ function DashboardMockup() {
         <div className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[#ef4444]/80 cursor-pointer hover:bg-[#ef4444] transition-colors" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]/80 cursor-pointer hover:bg-[#f59e0b] transition-colors" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#22c55e]/80 cursor-pointer hover:bg-[#22c55e] transition-colors" />
+          <span className="h-2.5 w-2.5 rounded-full bg-accent/80 cursor-pointer hover:bg-accent transition-colors" />
         </div>
         <div className="flex items-center gap-1.5 rounded-lg bg-white/5 px-3 py-1 text-[10px] text-slate-400">
           <Globe className="h-3 w-3" /> app.adwiser.ai
         </div>
-        <div className="flex items-center gap-1 text-[10px] text-[#22c55e]">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#22c55e] animate-pulse" />
+        <div className="flex items-center gap-1 text-[10px] text-accent">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
           Live
         </div>
       </div>
@@ -203,7 +203,7 @@ function DashboardMockup() {
             onClick={() => setActiveTab(tab)}
             className={`px-3 py-1.5 text-[10px] font-medium capitalize rounded-t-md transition-all duration-200 ${
               activeTab === tab
-                ? "text-white border-b-2 border-[#3b82f6] bg-white/5"
+                ? "text-white border-b-2 border-primary bg-white/5"
                 : "text-slate-500 hover:text-slate-300"
             }`}
           >
@@ -223,7 +223,7 @@ function DashboardMockup() {
                   ₹<span ref={revenue.ref}>{(revenue.val / 100000).toFixed(1)}L</span>
                 </p>
               </div>
-              <span className="flex items-center gap-1 rounded-full bg-[#22c55e]/15 px-2 py-0.5 text-[9px] font-semibold text-[#22c55e]">
+              <span className="flex items-center gap-1 rounded-full bg-accent/15 px-2 py-0.5 text-[9px] font-semibold text-accent">
                 <TrendingUp className="h-2.5 w-2.5" /> +24%
               </span>
             </div>
@@ -235,7 +235,7 @@ function DashboardMockup() {
                   animate={{ height: `${h}%` }}
                   transition={{ duration: 0.7, delay: 0.4 + i * 0.06, ease: EASE }}
                   className="flex-1 rounded-sm"
-                  style={{ background: i === 6 ? "linear-gradient(to top, #f43f5e, #3b82f6)" : "rgba(59,130,246,0.25)", minHeight: 3 }}
+                  style={{ background: i === 6 ? "linear-gradient(to top, #f43f5e, var(--color-primary))" : "rgba(59,130,246,0.25)", minHeight: 3 }}
                 />
               ))}
             </div>
@@ -248,10 +248,10 @@ function DashboardMockup() {
             </div>
             <div>
               <div className="text-lg font-bold text-white">8,940</div>
-              <div className="text-[9px] text-[#22c55e] font-semibold">+38% this week</div>
+              <div className="text-[9px] text-accent font-semibold">+38% this week</div>
             </div>
             <div className="space-y-1">
-              {[{ w: 85, c: "#3b82f6" }, { w: 60, c: "#06b6d4" }, { w: 40, c: "#f43f5e" }].map((b, i) => (
+              {[{ w: 85, c: "var(--color-primary)" }, { w: 60, c: "var(--color-accent)" }, { w: 40, c: "#f43f5e" }].map((b, i) => (
                 <motion.div key={i} className="h-1 rounded-full bg-white/5 overflow-hidden">
                   <motion.div initial={{ width: 0 }} animate={{ width: `${b.w}%` }}
                     transition={{ duration: 1, delay: 0.6 + i * 0.12, ease: EASE }}
@@ -281,7 +281,7 @@ function DashboardMockup() {
               <div className="text-sm font-bold text-white">
                 <span ref={c.ref.ref}>{c.label === "Conversion" ? `${(c.ref.val / 10).toFixed(1)}%` : c.ref.val.toLocaleString()}</span>
               </div>
-              <div className="mt-0.5 text-[9px] font-semibold text-[#22c55e]">{c.delta}</div>
+              <div className="mt-0.5 text-[9px] font-semibold text-accent">{c.delta}</div>
               <motion.div className="mt-2 h-0.5 rounded-full" style={{ background: `${c.color}33` }}>
                 <motion.div initial={{ width: 0 }} animate={{ width: hoveredCard === i ? "100%" : "60%" }}
                   transition={{ duration: 0.4, ease: EASE }}
@@ -297,11 +297,11 @@ function DashboardMockup() {
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-semibold text-slate-300">Weekly Performance</span>
               <span className="flex items-center gap-1 text-[9px] text-slate-500">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#3b82f6]" /> Visitors
-                <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-[#06b6d4]" /> Leads
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Visitors
+                <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-accent" /> Leads
               </span>
             </div>
-            <span className="flex items-center gap-1 rounded-full bg-[#22c55e]/15 px-2 py-0.5 text-[9px] font-semibold text-[#22c55e]">
+            <span className="flex items-center gap-1 rounded-full bg-accent/15 px-2 py-0.5 text-[9px] font-semibold text-accent">
               <TrendingUp className="h-2.5 w-2.5" /> Trending up
             </span>
           </div>
@@ -316,8 +316,8 @@ function DashboardMockup() {
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5">
               <span className="text-[11px] font-semibold text-white">AI Assistant</span>
-              <span className="flex items-center gap-1 rounded-full bg-[#38bdf8]/10 px-2 py-0.5 text-[9px] text-[#38bdf8]">
-                <span className="h-1 w-1 rounded-full bg-[#38bdf8] animate-pulse" /> typing
+              <span className="flex items-center gap-1 rounded-full bg-secondary/10 px-2 py-0.5 text-[9px] text-secondary">
+                <span className="h-1 w-1 rounded-full bg-secondary animate-pulse" /> typing
               </span>
             </div>
             <AITypingText />
@@ -370,7 +370,7 @@ function FloatingLeadCard() {
           <motion.div key={leadIdx} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.35 }}>
             <div className="flex items-center gap-2">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#22c55e] to-[#0d9488] text-white text-sm">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-[#0d9488] text-white text-sm">
                 <Bell className="h-4 w-4" />
               </span>
               <div>
@@ -399,16 +399,16 @@ function FloatingStatCard() {
         className="glass-strong w-40 rounded-2xl p-3 shadow-xl">
         <div className="flex items-center justify-between">
           <span className="text-[10px] text-muted-foreground">Revenue</span>
-          <TrendingUp className="h-3.5 w-3.5 text-[#22c55e]" />
+          <TrendingUp className="h-3.5 w-3.5 text-accent" />
         </div>
         <div className="mt-1 text-xl font-bold text-foreground">₹40.2L</div>
-        <div className="text-[9px] font-semibold text-[#22c55e]">+24% this month</div>
+        <div className="text-[9px] font-semibold text-accent">+24% this month</div>
         <div className="mt-2 flex h-6 items-end gap-0.5">
           {[40, 55, 48, 70, 62, 85, 100].map((h, i) => (
             <motion.div key={i} initial={{ height: 0 }}
               animate={{ height: `${h}%` }}
               transition={{ duration: 0.5, delay: 1 + i * 0.06, ease: EASE }}
-              className="flex-1 rounded-sm bg-gradient-to-t from-rose-500/40 to-[#38bdf8]" style={{ minHeight: 2 }} />
+              className="flex-1 rounded-sm bg-gradient-to-t from-rose-500/40 to-secondary" style={{ minHeight: 2 }} />
           ))}
         </div>
       </motion.div>
@@ -433,5 +433,5 @@ function FloatingAIWidget() {
 }
 
 function FloatingGlowOrb() {
-  return <div className="absolute -right-10 -top-10 -z-10 h-32 w-32 rounded-full bg-[#3b82f6]/30 blur-2xl animate-pulse-glow" />;
+  return <div className="absolute -right-10 -top-10 -z-10 h-32 w-32 rounded-full bg-primary/30 blur-2xl animate-pulse-glow" />;
 }
