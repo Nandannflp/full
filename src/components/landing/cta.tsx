@@ -52,7 +52,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-            className="mt-5 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
             Ready To Scale Faster?
           </motion.h2>
@@ -62,7 +62,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-            className="mx-auto mt-5 max-w-xl text-pretty text-base text-slate-700 dark:text-slate-300/90 sm:text-lg"
+            className="mx-auto mt-5 max-w-xl text-pretty text-base text-white/70 sm:text-lg"
           >
             Join 500+ brands growing with Adwiser. Get a free strategy session
             and a custom growth roadmap in 24 hours.

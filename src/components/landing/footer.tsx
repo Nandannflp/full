@@ -36,7 +36,7 @@ const SOCIALS = [
 
 export function Footer() {
   return (
-    <footer className="relative mt-auto border-t border-slate-900/10 bg-[#0A0A0A]/80 backdrop-blur-xl">
+    <footer className="relative mt-auto border-t border-border bg-background/95 backdrop-blur-xl">
       {/* glass separator glow */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/60 to-transparent" />
 
