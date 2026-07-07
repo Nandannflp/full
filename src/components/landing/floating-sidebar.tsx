@@ -9,6 +9,7 @@ const SECTIONS = [
   { id: "solutions", label: "Solutions" },
   { id: "why-adwiser", label: "Why Adwiser?" },
   { id: "founder-team", label: "Founder & Team" },
+  { id: "testimonials", label: "Testimonials" },
   { id: "faq", label: "FAQs" },
   { id: "contact", label: "Contact" },
 ];

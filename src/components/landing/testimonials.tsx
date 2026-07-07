@@ -71,7 +71,7 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section id="founder-team" className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
+    <section id="testimonials" className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
       <SectionHeading
         kicker="Testimonials"
         title="Loved by founders &"

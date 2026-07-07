@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { label: "Solutions", href: "#solutions" },
   { label: "Why Adwiser?", href: "#why-adwiser" },
   { label: "Founder & Team", href: "#founder-team" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "FAQs", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -75,7 +76,7 @@ export function Navbar() {
               href="#contact"
               className="btn-primary-glow inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold"
             >
-              Get Started
+              Book a Call
             </a>
           </Magnetic>
         </div>
@@ -123,7 +124,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className="btn-primary-glow mt-2 block rounded-xl px-4 py-3 text-center text-sm font-semibold"
               >
-                Get Started
+                Book a Call
               </a>
             </div>
           </motion.div>

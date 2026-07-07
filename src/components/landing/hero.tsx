@@ -136,7 +136,7 @@ export function Hero() {
               href="#contact"
               className="btn-primary-glow group inline-flex w-full items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold sm:w-auto"
             >
-              Get Started
+              Book a Call
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Magnetic>

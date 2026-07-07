@@ -4,10 +4,9 @@ import { AuroraBackground } from "@/components/landing/aurora-background";
 import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
 import { Services } from "@/components/landing/services";
-
-import { Stats } from "@/components/landing/stats";
 import { Solutions } from "@/components/landing/solutions";
-
+import { Stats } from "@/components/landing/stats";
+import { FounderTeam } from "@/components/landing/founder-team";
 import { Testimonials } from "@/components/landing/testimonials";
 import { FAQ } from "@/components/landing/faq";
 import { CTA } from "@/components/landing/cta";
@@ -28,10 +27,9 @@ export default function Home() {
       <main id="main" className="flex-1">
         <Hero />
         <Services />
-
-        <Stats />
         <Solutions />
-
+        <Stats />
+        <FounderTeam />
         <Testimonials />
         <FAQ />
         <CTA />
