@@ -5,55 +5,40 @@
  * client-side entry component) to ensure all plugins are registered globally
  * before any animation code runs.
  *
- * ⚠️  Club / Premium plugins (marked below) require a GSAP membership.
- *     https://gsap.com/pricing/
- *     Without a valid license, these will either throw or silently no-op.
- *
- * Free plugins bundled with gsap:
- *   CustomEase, Draggable, EasePack (RoughEase, ExpoScaleEase, SlowMo),
- *   EaselPlugin, Flip, MotionPathPlugin, Observer, PixiPlugin,
- *   ScrollToPlugin, TextPlugin
- *
- * Club / Premium plugins (require membership):
- *   CustomBounce, CustomWiggle, DrawSVGPlugin, GSDevTools, InertiaPlugin,
- *   MotionPathHelper, MorphSVGPlugin, Physics2DPlugin, PhysicsPropsPlugin,
- *   ScrambleTextPlugin, ScrollSmoother, SplitText
+ * All GSAP plugins are free as of 2024. https://gsap.com/pricing/
  */
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-// ── EasePack (free) ───────────────────────────────────────────────────────────
+// ── EasePack ──────────────────────────────────────────────────────────────────
 import { RoughEase, ExpoScaleEase, SlowMo } from "gsap/EasePack";
 
-// ── Free plugins ──────────────────────────────────────────────────────────────
+// ── Custom Eases (CustomBounce & CustomWiggle depend on CustomEase) ────────────
 import { CustomEase } from "gsap/CustomEase";
-import { Draggable } from "gsap/Draggable";
-import { EaselPlugin } from "gsap/EaselPlugin";
-import { Flip } from "gsap/Flip";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { Observer } from "gsap/Observer";
-import { PixiPlugin } from "gsap/PixiPlugin";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
-
-// ── Club / Premium plugins ────────────────────────────────────────────────────
-// Requires CustomEase to be registered first
 import { CustomBounce } from "gsap/CustomBounce";
 import { CustomWiggle } from "gsap/CustomWiggle";
 
+// ── Plugins ───────────────────────────────────────────────────────────────────
+import { Draggable } from "gsap/Draggable";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { EaselPlugin } from "gsap/EaselPlugin";
+import { Flip } from "gsap/Flip";
 import { GSDevTools } from "gsap/GSDevTools";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
+import { Observer } from "gsap/Observer";
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";
 import { PhysicsPropsPlugin } from "gsap/PhysicsPropsPlugin";
+import { PixiPlugin } from "gsap/PixiPlugin";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-// Requires ScrollTrigger to be registered first
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother"; // depends on ScrollTrigger
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { SplitText } from "gsap/SplitText";
+import { TextPlugin } from "gsap/TextPlugin";
 
 // ── Register everything with GSAP ─────────────────────────────────────────────
 gsap.registerPlugin(
@@ -64,31 +49,29 @@ gsap.registerPlugin(
   ExpoScaleEase,
   SlowMo,
   CustomEase,
-  CustomBounce, // depends on CustomEase
-  CustomWiggle, // depends on CustomEase
+  CustomBounce,
+  CustomWiggle,
 
-  // Free plugins
+  // Plugins
   Draggable,
+  DrawSVGPlugin,
   EaselPlugin,
   Flip,
-  MotionPathPlugin,
-  Observer,
-  PixiPlugin,
-  ScrollTrigger,
-  ScrollToPlugin,
-  TextPlugin,
-
-  // Club plugins
-  DrawSVGPlugin,
   GSDevTools,
   InertiaPlugin,
   MotionPathHelper,
+  MotionPathPlugin,
   MorphSVGPlugin,
+  Observer,
   Physics2DPlugin,
   PhysicsPropsPlugin,
+  PixiPlugin,
   ScrambleTextPlugin,
-  ScrollSmoother, // depends on ScrollTrigger
-  SplitText
+  ScrollTrigger,
+  ScrollSmoother,
+  ScrollToPlugin,
+  SplitText,
+  TextPlugin
 );
 
 // Re-export gsap and commonly used plugins for convenience
