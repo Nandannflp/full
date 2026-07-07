@@ -6,12 +6,12 @@ import Image from "next/image";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const PARTNERS = [
-  { name: "Meta", src: "/Meta-logo.webp", w: 80, h: 40 },
-  { name: "Google", src: "/google-logo.jpg", w: 90, h: 40 },
-  { name: "Shopify", src: "/Shopify-logo.webp", w: 110, h: 40 },
-  { name: "Hostinger", src: "/Hostinger-logo.png", w: 110, h: 40 },
-  { name: "Anthropic", src: "/Anthropic-logo.png", w: 110, h: 40 },
-  { name: "OpenAI", src: "/Openai-logo.webp", w: 100, h: 40 },
+  { name: "Meta", src: "/Meta-logo.webp" },
+  { name: "Google", src: "/google-logo.jpg" },
+  { name: "Shopify", src: "/Shopify-logo.webp" },
+  { name: "Hostinger", src: "/Hostinger-logo.png" },
+  { name: "Anthropic", src: "/Anthropic-logo.png" },
+  { name: "OpenAI", src: "/Openai-logo.webp" },
 ];
 
 export function LogosMarquee() {
@@ -21,32 +21,35 @@ export function LogosMarquee() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, ease: EASE }}
-      className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6"
-      aria-label="Partnered with"
+      className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6"
+      aria-label="Powered By"
     >
-      <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-        Our Performance Marketing Services are Certified by
+      <p className="mb-12 text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+        Powered By
       </p>
 
-      <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+      <div className="flex flex-wrap items-center justify-center gap-12 sm:gap-16 lg:gap-20">
         {PARTNERS.map((logo, i) => (
           <motion.div
             key={logo.name}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.08, ease: EASE }}
-            className="flex items-center justify-center rounded-2xl border border-border/60 bg-white/80 px-6 py-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:border-border dark:bg-white/10"
+            transition={{ duration: 0.4, delay: i * 0.07, ease: EASE }}
+            className="group flex flex-col items-center gap-3"
           >
-            <div className="relative" style={{ width: logo.w, height: logo.h }}>
+            <div className="relative h-16 w-32 opacity-70 transition-opacity duration-300 group-hover:opacity-100">
               <Image
                 src={logo.src}
                 alt={`${logo.name} logo`}
                 fill
                 className="object-contain"
-                sizes={`${logo.w}px`}
+                sizes="128px"
               />
             </div>
+            <span className="text-sm font-semibold tracking-wide text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
+              {logo.name}
+            </span>
           </motion.div>
         ))}
       </div>
