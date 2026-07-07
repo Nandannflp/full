@@ -16,9 +16,9 @@ export function CTA() {
       id="contact"
       className="relative mx-auto w-full max-w-7xl scroll-mt-24 px-4 py-20 sm:px-6 lg:py-28"
     >
-      <div className="relative overflow-hidden rounded-[32px] border border-slate-900/10 px-6 py-14 sm:px-12 sm:py-16 lg:px-20 lg:py-20">
+      <div className="relative overflow-hidden rounded-[32px] border border-border px-6 py-14 sm:px-12 sm:py-16 lg:px-20 lg:py-20">
         {/* animated aurora background */}
-        <div className="absolute inset-0 -z-10 bg-[#0A0A0A]" />
+        <div className="absolute inset-0 -z-10 bg-surface" />
         <div
           className="absolute inset-0 -z-10 gradient-animate opacity-90"
           style={{
@@ -52,7 +52,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-            className="mt-5 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
           >
             Ready To Scale Faster?
           </motion.h2>
@@ -62,7 +62,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
-            className="mx-auto mt-5 max-w-xl text-pretty text-base text-white/70 sm:text-lg"
+            className="mx-auto mt-5 max-w-xl text-pretty text-base text-muted-foreground sm:text-lg"
           >
             Join 500+ brands growing with Adwiser. Get a free strategy session
             and a custom growth roadmap in 24 hours.

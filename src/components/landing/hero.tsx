@@ -119,11 +119,6 @@ export function Hero() {
               Book a Call <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Magnetic>
-          <Magnetic strength={0.3}>
-            <a href="#showcase" className="btn-ghost-glass group inline-flex w-full items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold sm:w-auto">
-              <Play className="h-4 w-4 fill-current" /> Book Consultation
-            </a>
-          </Magnetic>
         </motion.div>
 
         {/* Trust row */}
@@ -182,10 +177,10 @@ function DashboardMockup() {
     <motion.div
       animate={{ y: [0, -10, 0] }}
       transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-      className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0d1117] shadow-2xl shadow-black/40"
+      className="relative overflow-hidden rounded-3xl bg-surface border border-border shadow-2xl shadow-black/40"
     >
       {/* ── Title bar ── */}
-      <div className="flex items-center justify-between border-b border-white/5 px-4 py-3">
+      <div className="flex items-center justify-between border-b border-border px-4 py-3">
         <div className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[#ef4444]/80 cursor-pointer hover:bg-[#ef4444] transition-colors" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]/80 cursor-pointer hover:bg-[#f59e0b] transition-colors" />
@@ -220,7 +215,7 @@ function DashboardMockup() {
       <div className="p-3">
         {/* ── Top row: Revenue card + bar chart ── */}
         <div className="grid grid-cols-3 gap-2 mb-2">
-          <div className="col-span-2 rounded-2xl bg-[#161b27] border border-white/5 p-3">
+          <div className="col-span-2 rounded-2xl bg-surface-elevated border-border p-3">
             <div className="flex items-start justify-between mb-2">
               <div>
                 <p className="text-[9px] text-slate-500 uppercase tracking-wider">Total Revenue</p>
@@ -246,7 +241,7 @@ function DashboardMockup() {
             </div>
           </div>
 
-          <div className="col-span-1 rounded-2xl bg-[#161b27] border border-white/5 p-3 flex flex-col justify-between">
+          <div className="col-span-1 rounded-2xl bg-surface-elevated border-border p-3 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="text-[9px] text-slate-500">Growth</span>
               <BarChart3 className="h-3 w-3 text-slate-500" />
@@ -275,7 +270,7 @@ function DashboardMockup() {
               onHoverEnd={() => setHoveredCard(null)}
               animate={{ scale: hoveredCard === i ? 1.04 : 1 }}
               transition={{ duration: 0.2 }}
-              className="rounded-2xl bg-[#161b27] border border-white/5 p-3 cursor-pointer"
+              className="rounded-2xl bg-surface-elevated border-border p-3 cursor-pointer"
             >
               <div className="flex items-center gap-1.5 mb-1.5">
                 <span className="flex h-5 w-5 items-center justify-center rounded-md" style={{ background: `${c.color}22`, color: c.color }}>
@@ -297,7 +292,7 @@ function DashboardMockup() {
         </div>
 
         {/* ── Full-width chart ── */}
-        <div className="rounded-2xl bg-[#161b27] border border-white/5 p-3 mb-2">
+        <div className="rounded-2xl bg-surface-elevated border-border p-3 mb-2">
           <div className="mb-2 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-semibold text-slate-300">Weekly Performance</span>
@@ -314,7 +309,7 @@ function DashboardMockup() {
         </div>
 
         {/* ── AI assistant bar ── */}
-        <div className="flex items-center gap-2 rounded-2xl bg-[#161b27] border border-white/5 p-3">
+        <div className="flex items-center gap-2 rounded-2xl bg-surface-elevated border-border p-3">
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-rose-500 to-orange-500">
             <Bot className="h-4 w-4 text-white" />
           </div>

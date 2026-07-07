@@ -9,7 +9,6 @@ import { ThemeToggle } from "./theme-toggle";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "All Services ↗", href: "/services" },
   { label: "Solutions", href: "#solutions" },
   { label: "Why Adwiser?", href: "#why-adwiser" },
   { label: "Founder & Team", href: "#founder-team" },
@@ -46,8 +45,8 @@ export function Navbar() {
       >
         {/* Logo */}
         <a href="#home" className="group flex items-center gap-2.5">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 via-orange-400 to-orange-500 shadow-[0_0_24px_-4px_rgba(59,130,246,0.7)]">
-            <Sparkles className="h-5 w-5 text-foreground" />
+          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[image:var(--gradient-brand)] shadow-[0_0_24px_-4px_var(--primary)]">
+            <Sparkles className="h-5 w-5 text-white" />
             <span className="absolute inset-0 rounded-xl ring-1 ring-white/20" />
           </span>
           <span className="text-lg font-bold tracking-tight text-foreground">
@@ -64,7 +63,7 @@ export function Navbar() {
                 className="group relative rounded-lg px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
-                <span className="absolute inset-x-3.5 -bottom-0.5 h-px origin-left scale-x-0 bg-gradient-to-r from-rose-500 to-orange-500 transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-3.5 -bottom-0.5 h-px origin-left scale-x-0 bg-[image:var(--gradient-brand)] transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             </li>
           ))}
