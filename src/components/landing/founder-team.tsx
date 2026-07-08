@@ -82,13 +82,13 @@ export function FounderTeam() {
             { opacity: 1, x: 0, scale: 1, duration: 1, ease: "power3.out" }
           );
 
-          // Reveal background text
+          // Reveal background text with brush effect
           if (bgTextRefs.current[i]) {
             tl.fromTo(
               bgTextRefs.current[i],
-              { opacity: 0, scale: 0.9, y: 20 },
-              { opacity: 1, scale: 1, y: 0, duration: 1, ease: "power2.out" },
-              "-=0.6"
+              { clipPath: "inset(0 100% 0 0)", opacity: 0 },
+              { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 1.2, ease: "power3.inOut" },
+              "-=0.8"
             );
           }
 
@@ -124,12 +124,12 @@ export function FounderTeam() {
             { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }
           );
 
-          // Reveal background text
+          // Reveal background text with brush effect
           if (bgTextRefs.current[i]) {
             tl.fromTo(
               bgTextRefs.current[i],
-              { opacity: 0, y: 20 },
-              { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+              { clipPath: "inset(0 100% 0 0)", opacity: 0 },
+              { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 1, ease: "power3.inOut" },
               "-=0.4"
             );
           }
@@ -173,7 +173,7 @@ export function FounderTeam() {
         }
         .bg-typography {
           mix-blend-mode: overlay;
-          -webkit-text-stroke: 1px color-mix(in srgb, var(--color-primary) 10%, transparent);
+          -webkit-text-stroke: 1.5px color-mix(in srgb, #06b6d4 30%, transparent);
         }
       `}</style>
 
@@ -189,7 +189,7 @@ export function FounderTeam() {
             ref={(el) => { bgTextRefs.current[0] = el; }}
             className="absolute top-0 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-[-15%] -translate-y-[45%] md:-translate-y-[30%] z-0 pointer-events-none"
           >
-            <span className="font-display font-black tracking-tighter text-[110px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-transparent bg-clip-text bg-gradient-to-b from-primary/10 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
+            <span className="font-display font-black tracking-tighter text-[110px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-transparent bg-clip-text bg-gradient-to-b from-cyan-500/20 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
               {FOUNDERS[0].bgText}
             </span>
           </div>
@@ -246,7 +246,7 @@ export function FounderTeam() {
             ref={(el) => { bgTextRefs.current[1] = el; }}
             className="absolute top-0 right-1/2 md:right-0 translate-x-1/2 md:translate-x-[15%] -translate-y-[45%] md:-translate-y-[20%] z-0 pointer-events-none"
           >
-            <span className="font-display font-black tracking-tighter text-[100px] sm:text-[120px] md:text-[160px] lg:text-[190px] text-transparent bg-clip-text bg-gradient-to-b from-secondary/10 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
+            <span className="font-display font-black tracking-tighter text-[100px] sm:text-[120px] md:text-[160px] lg:text-[190px] text-transparent bg-clip-text bg-gradient-to-b from-cyan-500/20 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
               {FOUNDERS[1].bgText}
             </span>
           </div>
