@@ -172,8 +172,8 @@ export function FounderTeam() {
           transform: scale(1.03);
         }
         .bg-typography {
-          mix-blend-mode: overlay;
-          -webkit-text-stroke: 1.5px color-mix(in srgb, #06b6d4 30%, transparent);
+          opacity: 0.9;
+          -webkit-text-stroke: 1.5px color-mix(in srgb, #1e3a8a 50%, transparent);
         }
       `}</style>
 
@@ -189,7 +189,7 @@ export function FounderTeam() {
             ref={(el) => { bgTextRefs.current[0] = el; }}
             className="absolute top-0 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-[-15%] -translate-y-[45%] md:-translate-y-[30%] z-0 pointer-events-none"
           >
-            <span className="font-display font-black tracking-tighter text-[110px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-transparent bg-clip-text bg-gradient-to-b from-cyan-500/20 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
+            <span className="font-display font-black tracking-tighter text-[110px] sm:text-[140px] md:text-[200px] lg:text-[240px] text-transparent bg-clip-text bg-gradient-to-b from-[#1e3a8a]/20 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
               {FOUNDERS[0].bgText}
             </span>
           </div>
@@ -246,7 +246,7 @@ export function FounderTeam() {
             ref={(el) => { bgTextRefs.current[1] = el; }}
             className="absolute top-0 right-1/2 md:right-0 translate-x-1/2 md:translate-x-[15%] -translate-y-[45%] md:-translate-y-[20%] z-0 pointer-events-none"
           >
-            <span className="font-display font-black tracking-tighter text-[100px] sm:text-[120px] md:text-[160px] lg:text-[190px] text-transparent bg-clip-text bg-gradient-to-b from-cyan-500/20 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
+            <span className="font-display font-black tracking-tighter text-[100px] sm:text-[120px] md:text-[160px] lg:text-[190px] text-transparent bg-clip-text bg-gradient-to-b from-[#1e3a8a]/20 to-transparent bg-typography uppercase leading-none whitespace-nowrap">
               {FOUNDERS[1].bgText}
             </span>
           </div>
