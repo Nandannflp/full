@@ -11,7 +11,7 @@ const TESTIMONIALS = [
     name: "Sarah Chen",
     role: "CEO, Nebula Finance",
     initials: "SC",
-    gradient: "from-rose-500 to-[#3b82f6]",
+    gradient: "from-primary to-[#3b82f6]",
     review:
       "Adwiser transformed our lead pipeline. Within 3 months we saw a 212% increase in qualified leads. Their AI automation runs our entire nurture sequence.",
     rating: 5,
@@ -21,7 +21,7 @@ const TESTIMONIALS = [
     name: "Marcus Reid",
     role: "Founder, Vertex Commerce",
     initials: "MR",
-    gradient: "from-rose-500 to-orange-500",
+    gradient: "from-primary to-accent",
     review:
       "The website they built is genuinely award-worthy. Fast, beautiful, and it converts. Our AOV jumped 340% after launch. Worth every penny.",
     rating: 5,
@@ -51,7 +51,7 @@ const TESTIMONIALS = [
     name: "Elena Voss",
     role: "VP Growth, Pulse Analytics",
     initials: "EV",
-    gradient: "from-rose-500 to-orange-500",
+    gradient: "from-primary to-accent",
     review:
       "We process 10M+ events a day and their dashboards make it all legible. The automation alone saved us 30 hours a week.",
     rating: 5,
@@ -61,7 +61,7 @@ const TESTIMONIALS = [
     name: "Tom Bradley",
     role: "Owner, Bradley & Co",
     initials: "TB",
-    gradient: "from-rose-500 to-[#38bdf8]",
+    gradient: "from-primary to-[#38bdf8]",
     review:
       "I've worked with many agencies. None come close to Adwiser's blend of design taste and technical depth. True partners.",
     rating: 5,

@@ -125,7 +125,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE, delay: 0.35 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row xl:justify-start">
           <div className="flex -space-x-2.5">
-            {["from-rose-500 to-primary", "from-rose-500 to-orange-500", "from-accent to-secondary", "from-secondary to-primary"].map((g, i) => (
+            {["from-primary to-primary", "from-primary to-accent", "from-accent to-secondary", "from-secondary to-primary"].map((g, i) => (
               <span key={i} className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${g} text-xs font-bold text-white ring-2 ring-background`}>
                 {["A", "K", "M", "S"][i]}
               </span>
@@ -310,7 +310,7 @@ function DashboardMockup() {
 
         {/* ── AI assistant bar ── */}
         <div className="flex items-center gap-2 rounded-2xl bg-surface-elevated border-border p-3">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-rose-500 to-orange-500">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
             <Bot className="h-4 w-4 text-white" />
           </div>
           <div className="min-w-0 flex-1">
@@ -383,7 +383,7 @@ function FloatingLeadCard() {
         <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-muted">
           <motion.div key={`bar-${leadIdx}`} initial={{ width: "0%" }} animate={{ width: "72%" }}
             transition={{ duration: 1.2, ease: EASE }}
-            className="h-full rounded-full bg-gradient-to-r from-rose-500 to-orange-500" />
+            className="h-full rounded-full bg-gradient-to-r from-primary to-accent" />
         </div>
       </motion.div>
     </motion.div>
@@ -408,7 +408,7 @@ function FloatingStatCard() {
             <motion.div key={i} initial={{ height: 0 }}
               animate={{ height: `${h}%` }}
               transition={{ duration: 0.5, delay: 1 + i * 0.06, ease: EASE }}
-              className="flex-1 rounded-sm bg-gradient-to-t from-rose-500/40 to-secondary" style={{ minHeight: 2 }} />
+              className="flex-1 rounded-sm bg-gradient-to-t from-primary/40 to-secondary" style={{ minHeight: 2 }} />
           ))}
         </div>
       </motion.div>
@@ -423,7 +423,7 @@ function FloatingAIWidget() {
       className="absolute -bottom-5 left-1/4 hidden sm:block z-10">
       <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
         className="glass-strong flex items-center gap-2 rounded-full py-2 pl-2 pr-4 shadow-lg">
-        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500">
+        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent">
           <Bot className="h-4 w-4 text-white" />
         </span>
         <span className="text-xs font-medium text-foreground">AI optimized 3 pages</span>

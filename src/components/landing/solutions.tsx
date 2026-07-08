@@ -52,7 +52,7 @@ export function Solutions() {
 
       <div className="relative mt-16">
         {/* connecting line */}
-        <div className="pointer-events-none absolute left-0 right-0 top-9 hidden h-px bg-gradient-to-r from-transparent via-orange-400/40 to-transparent lg:block" />
+        <div className="pointer-events-none absolute left-0 right-0 top-9 hidden h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent lg:block" />
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
@@ -67,7 +67,7 @@ export function Solutions() {
               {/* node */}
               <div className="relative z-10 mx-auto mb-6 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-2xl glass-card transition-all duration-500 group-hover:glow-blue sm:mx-0">
                 <s.icon className="h-7 w-7 text-[#38bdf8] transition-transform duration-500 group-hover:scale-110" />
-                <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-rose-500 to-orange-500 text-[10px] font-bold text-foreground shadow-[0_0_16px_-2px_rgba(59,130,246,0.8)]">
+                <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-[10px] font-bold text-foreground shadow-[0_0_16px_-2px_rgba(59,130,246,0.8)]">
                   {s.step}
                 </span>
               </div>

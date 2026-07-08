@@ -71,7 +71,7 @@ export function FAQ() {
             >
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-3 py-2 text-left">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 text-[#38bdf8] transition-colors duration-300 group-data-[state=open]:bg-gradient-to-br group-data-[state=open]:from-rose-500 group-data-[state=open]:to-orange-500 group-data-[state=open]:text-foreground">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-900/5 text-[#38bdf8] transition-colors duration-300 group-data-[state=open]:bg-gradient-to-br group-data-[state=open]:from-primary group-data-[state=open]:to-accent group-data-[state=open]:text-foreground">
                     <HelpCircle className="h-4 w-4" />
                   </span>
                   <span className="text-base font-semibold text-foreground">
@@ -95,7 +95,7 @@ export function FAQ() {
         transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
         className="mt-10 flex flex-col items-center justify-center gap-4 rounded-2xl glass-card p-6 text-center sm:flex-row sm:text-left"
       >
-        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-orange-500">
+        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent">
           <MessageSquareMore className="h-5 w-5 text-foreground" />
         </span>
         <div className="flex-1">

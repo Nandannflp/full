@@ -215,7 +215,7 @@
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(244, 63, 94, 0.6), rgba(249, 115, 22, 0.5), rgba(244, 63, 94, 0.1));
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.6), rgba(67, 123, 255, 0.5), rgba(108, 92, 231, 0.1));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -233,7 +233,7 @@
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: conic-gradient(from var(--angle, 0deg), #f43f5e, #f97316, #fb923c, #f43f5e);
+  background: conic-gradient(from var(--angle, 0deg), #6C5CE7, #437BFF, #00D4C9, #6C5CE7);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -362,7 +362,7 @@
 
 /* shimmering skeleton line */
 .shimmer-line {
-  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(244,63,94,0.15) 50%, rgba(255,255,255,0.05) 75%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(108, 92, 231, 0.15) 50%, rgba(255,255,255,0.05) 75%);
   background-size: 200% 100%;
   animation: shimmer 2.2s linear infinite;
 }
@@ -376,8 +376,8 @@
 /* grid pattern */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(244, 63, 94, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 63, 94, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(108, 92, 231, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 92, 231, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
@@ -385,7 +385,7 @@
 
 /* dotted pattern */
 .dot-pattern {
-  background-image: radial-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(67, 123, 255, 0.1) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 

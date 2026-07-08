@@ -13,7 +13,7 @@ const PROJECTS = [
     category: "Fintech SaaS",
     description: "AI-powered portfolio dashboard with real-time analytics.",
     metric: "+212% conversions",
-    gradient: "from-rose-500 via-orange-400 to-orange-500",
+    gradient: "from-primary via-secondary to-accent",
   },
   {
     name: "Lumen Health",
@@ -27,7 +27,7 @@ const PROJECTS = [
     category: "E-commerce",
     description: "Headless storefront with AI product recommendations.",
     metric: "+340% AOV",
-    gradient: "from-rose-500 via-[#2563eb] to-[#38bdf8]",
+    gradient: "from-primary via-[#2563eb] to-[#38bdf8]",
   },
   {
     name: "Orbit Studio",
@@ -41,7 +41,7 @@ const PROJECTS = [
     category: "Data Platform",
     description: "Real-time data visualization suite for enterprises.",
     metric: "10M+ events/day",
-    gradient: "from-rose-500 via-[#06b6d4] to-[#3b82f6]",
+    gradient: "from-primary via-[#06b6d4] to-[#3b82f6]",
   },
 ];
 

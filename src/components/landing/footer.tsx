@@ -38,14 +38,14 @@ export function Footer() {
   return (
     <footer className="relative mt-auto border-t border-border bg-background/95 backdrop-blur-xl">
       {/* glass separator glow */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/60 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
       <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           {/* Brand */}
           <div className="max-w-xs">
             <a href="#home" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 via-orange-400 to-orange-500 shadow-[0_0_24px_-4px_rgba(59,130,246,0.7)]">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary via-secondary to-accent shadow-[0_0_24px_-4px_rgba(59,130,246,0.7)]">
                 <Sparkles className="h-5 w-5 text-foreground" />
               </span>
               <span className="text-lg font-bold tracking-tight text-foreground">
