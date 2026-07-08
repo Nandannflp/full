@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
  * Animated cinematic background for Adwiser.
  * Layers:
  *  1. Dark navy gradient base
- *  2. Blue glowing aurora blobs (CSS drift)
+ *  2. Purple/violet glowing aurora blobs (CSS drift)
  *  3. Blurred mesh gradients
  *  4. Animated particles (canvas)
  *  5. Soft radial lights
@@ -53,7 +53,7 @@ export function AuroraBackground() {
         vy: (Math.random() - 0.5) * 0.25,
         r: Math.random() * 1.8 + 0.6,
         a: Math.random() * 0.5 + 0.2,
-        hue: Math.random() > 0.5 ? 340 : 25, /* pink (340) or orange (25) */
+        hue: Math.random() > 0.5 ? 270 : 258, /* purple (270) or violet (258) */
       }));
     };
 
@@ -104,7 +104,7 @@ export function AuroraBackground() {
           className="absolute -top-32 -left-24 h-[42rem] w-[42rem] rounded-full blur-[120px] animate-aurora"
           style={{
             background:
-              "radial-gradient(circle, rgba(244,63,94,0.15) 0%, rgba(244,63,94,0) 70%)",
+              "radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(168,85,247,0) 70%)",
           }}
         />
         <div
@@ -112,7 +112,7 @@ export function AuroraBackground() {
           style={{
             animationDelay: "-6s",
             background:
-              "radial-gradient(circle, rgba(251,146,60,0.15) 0%, rgba(251,146,60,0) 70%)",
+              "radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0) 70%)",
           }}
         />
         <div
@@ -120,7 +120,7 @@ export function AuroraBackground() {
           style={{
             animationDelay: "-12s",
             background:
-              "radial-gradient(circle, rgba(249,115,22,0.12) 0%, rgba(249,115,22,0) 70%)",
+              "radial-gradient(circle, rgba(124,58,237,0.12) 0%, rgba(124,58,237,0) 70%)",
           }}
         />
       </div>
@@ -130,7 +130,7 @@ export function AuroraBackground() {
         className="absolute inset-0 opacity-20"
         style={{
           background:
-            "conic-gradient(from 180deg at 50% 50%, rgba(244,63,94,0.15), rgba(251,146,60,0.15), rgba(251,113,133,0.1), rgba(244,63,94,0.15))",
+            "conic-gradient(from 180deg at 50% 50%, rgba(168,85,247,0.15), rgba(139,92,246,0.15), rgba(167,139,250,0.1), rgba(168,85,247,0.15))",
           filter: "blur(80px)",
         }}
       />
@@ -143,7 +143,7 @@ export function AuroraBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 50% at 80% 20%, rgba(251,146,60,0.05) 0%, transparent 60%), radial-gradient(50% 50% at 15% 75%, rgba(244,63,94,0.05) 0%, transparent 60%)",
+            "radial-gradient(60% 50% at 80% 20%, rgba(139,92,246,0.05) 0%, transparent 60%), radial-gradient(50% 50% at 15% 75%, rgba(168,85,247,0.05) 0%, transparent 60%)",
         }}
       />
 
