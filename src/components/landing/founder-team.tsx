@@ -20,7 +20,7 @@ const FOUNDERS = [
     details: "Worked with Tata Motors and Royal Enfield",
     image: "/Founder.png",
     bgText: "5+",
-    skills: ["Digital Marketer", "Lead Generation Expert"],
+    skills: ["Digital Marketer", "Lead Generation Expert", "Content Creator"],
     size: "large",
   },
   {
